@@ -497,8 +497,9 @@
   }
 
   svg {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
+    padding: 4px;
   }
 
   .header-nav__button-wrapper {
@@ -531,7 +532,7 @@
 
     @include r($breakpoint-3) {
       padding-top: 10px;
-      padding-bottom: 50px;
+      padding-bottom: 80px;
     }
   }
 
@@ -677,6 +678,12 @@
     @include r($breakpoint-2) {
       width: 20px;
       height: 20px;
+    }
+
+    @include r($breakpoint-3) {
+      width: 30px;
+      height: 30px;
+      padding: 4px;
     }
   }
 

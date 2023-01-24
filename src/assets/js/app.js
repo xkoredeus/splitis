@@ -983,8 +983,15 @@ $(() => {
             $('.header-top').appendTo('.header-menu__in');
 
             $('.js-toggle-catalog').on('click', function () {
-                $(this).toggleClass('active');
-                $('.catalog').slideToggle();
+
+                if (!($(this).hasClass('active'))) {
+                    $(this).addClass('active');
+                    $('.catalog').slideDown();
+                } else {
+                    $(this).removeClass('active');
+                    $('.catalog').slideUp();
+                }
+
             });
 
             $('.header-nav__link > svg').on('click', function (e) {
@@ -1140,7 +1147,9 @@ $(() => {
 
     $('.js-toggle-menu').on('click', function () {
 
-        if (($(this).hasClass('header-burger--active'))) {
+        if ($(this).hasClass('header-burger--active')) {
+            console.log('lal');
+
             $('.js-toggle-catalog').removeClass('active');
             $('.catalog-link').removeClass('active');
             $('.catalog-dropdown__link').removeClass('active');

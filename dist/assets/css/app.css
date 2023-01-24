@@ -26834,8 +26834,9 @@ a:hover {
 }
 
 .header-menu svg {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
+  padding: 4px;
 }
 
 .header-menu .header-nav__button-wrapper {
@@ -26879,7 +26880,7 @@ a:hover {
 @media only screen and (max-width: 976px) {
   .header-menu__in {
     padding-top: 10px;
-    padding-bottom: 50px;
+    padding-bottom: 80px;
   }
 }
 
@@ -27056,6 +27057,14 @@ a:hover {
   .header-nav__link svg {
     width: 20px;
     height: 20px;
+  }
+}
+
+@media only screen and (max-width: 976px) {
+  .header-nav__link svg {
+    width: 30px;
+    height: 30px;
+    padding: 4px;
   }
 }
 
