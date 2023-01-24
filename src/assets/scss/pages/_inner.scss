@@ -1327,7 +1327,7 @@
       margin-bottom: 10px;
       @include flex-center;
 
-      @include r($breakpoint-4) {
+      @include r($breakpoint-35) {
         height: 100px;
         width: 100px;
         margin-bottom: 5px;
@@ -1336,10 +1336,6 @@
       svg {
         max-width: 100%;
         height: auto;
-
-        @include r($breakpoint-4) {
-
-        }
       }
 
       img {

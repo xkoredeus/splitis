@@ -32903,7 +32903,7 @@ div.pagination .pagination-dots {
           align-items: center;
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 768px) {
   .card-package__item-picture {
     height: 100px;
     width: 100px;
