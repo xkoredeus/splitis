@@ -28352,16 +28352,20 @@ $(() => {
             }
         };
     });
-    $(".js-select").select2({
-        language: 'ru',
-        minimumResultsForSearch: -1,
-        width: '100%'
-    });
-    $(".js-select-auto-width").select2({
-        language: 'ru',
-        minimumResultsForSearch: -1,
-        width: 'auto'
-    });
+
+    if ($(window).width() + 15 > 975) {
+        $(".js-select").select2({
+            language: 'ru',
+            minimumResultsForSearch: -1,
+            width: '100%'
+        });
+        $(".js-select-auto-width").select2({
+            language: 'ru',
+            minimumResultsForSearch: -1,
+            width: 'auto'
+        });
+    }
+
 });
 
 $(() => {

@@ -24377,6 +24377,13 @@ select {
   border: none;
 }
 
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+}
+
 option {
   color: #1A1E24;
 }
@@ -24608,8 +24615,33 @@ input[type="number"] {
 
 .form-field--select {
   position: relative;
-  padding: 0;
-  border: none;
+}
+
+@media only screen and (min-width: 976px) {
+  .form-field--select {
+    padding: 0;
+    border: none;
+  }
+}
+
+@media only screen and (max-width: 976px) {
+  .form-field--select::before {
+    position: absolute;
+    content: '';
+    width: 13px;
+    height: 12px;
+    top: 50%;
+    right: 15px;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    background-image: url("../img/icon-arrow--select.svg");
+    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .form-field--select select {
+    width: 100%;
+  }
 }
 
 .form-field--select .form-field__label {
@@ -24622,6 +24654,14 @@ input[type="number"] {
 @media only screen and (max-width: 1260px) {
   .form-field--select .form-field__label {
     left: 13px;
+  }
+}
+
+@media only screen and (max-width: 976px) {
+  .form-field--select .form-field__label {
+    position: static;
+    left: auto;
+    top: auto;
   }
 }
 
@@ -29834,6 +29874,7 @@ div.pagination .pagination-dots {
 }
 
 .tabs-button {
+  color: #1A1E24;
   padding: 13px 25px;
   width: 100%;
   border: 1px solid #DEE1E5;

@@ -4,6 +4,12 @@ select {
   @include ease-long;
   border: none;
 }
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+}
 option {
   color: $dark;
 }
@@ -174,8 +180,28 @@ input[type="number"] {
 
 .form-field--select {
   position: relative;
-  padding: 0;
-  border: none;
+
+  @include rmin($breakpoint-3) {
+    padding: 0;
+    border: none;
+  }
+
+  @include r($breakpoint-3) {
+    &::before {
+      position: absolute;
+      content: '';
+      width: 13px;
+      height: 12px;
+      top: 50%;
+      right: 15px;
+      transform: translateY(-50%);
+      background-image: url('../img/icon-arrow--select.svg');
+      @include ct;
+    }
+    select {
+      width: 100%;
+    }
+  }
 
   .form-field__label {
     position: absolute;
@@ -185,6 +211,12 @@ input[type="number"] {
 
     @include r($breakpoint-2) {
       left: 13px;
+    }
+
+    @include r($breakpoint-3) {
+      position: static;
+      left: auto;
+      top: auto;
     }
   }
 
