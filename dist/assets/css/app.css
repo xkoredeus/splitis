@@ -32465,6 +32465,47 @@ div.pagination .pagination-dots {
   }
 }
 
+.card-sale {
+  padding: 10px 12px;
+  border: 1px solid #CB3958;
+  border-radius: 10px;
+  color: #CB3958;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+@media only screen and (max-width: 576px) {
+  .card-sale {
+    -ms-flex-item-align: stretch;
+        align-self: stretch;
+    width: 100%;
+  }
+}
+
+.card-sale-timer {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 15px;
+  text-align: center;
+}
+
+.card-sale-timer__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card-sale-timer__item div:first-child {
+  width: 30px;
+}
+
 .card-delivery {
   padding: 23px;
   background-color: #F7F7F9;

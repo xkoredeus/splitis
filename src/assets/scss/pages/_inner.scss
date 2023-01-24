@@ -1004,6 +1004,36 @@
   }
 }
 
+.card-sale {
+  padding: 10px 12px;
+  border: 1px solid $red;
+  border-radius: $radius;
+  color: $red;
+  align-self: flex-start;
+
+  @include r($breakpoint-4) {
+    align-self: stretch;
+    width: 100%;
+  }
+}
+
+.card-sale-timer {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 15px;
+  text-align: center;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    div:first-child {
+      width: 30px;
+    }
+  }
+}
+
 .card-delivery {
   padding: 23px;
   background-color: $grayBg;
