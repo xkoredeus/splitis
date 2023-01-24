@@ -28535,7 +28535,9 @@ $(() => {
                 $('.catalog').slideToggle();
             });
 
-            $('.header-nav__link > svg').on('click', function () {
+            $('.header-nav__link > svg').on('click', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
                 if ($(this).parent('.header-nav__link').hasClass('active')) {
 
                     $(this)
@@ -28556,7 +28558,9 @@ $(() => {
                     .next('.header-nav__dropdown')
                     .slideToggle();
             });
-            $('.header-nav__dropdown-link > svg').on('click', function () {
+            $('.header-nav__dropdown-link > svg').on('click', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
                 $(this)
                     .parent('.header-nav__dropdown-link')
                     .toggleClass('active')
@@ -28565,7 +28569,9 @@ $(() => {
             });
 
             /// ///
-            $('.catalog-link > svg').on('click', function () {
+            $('.catalog-link > svg').on('click', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
                 if ($(this).parent('.catalog-link').hasClass('active')) {
 
                     $(this)
@@ -28586,7 +28592,9 @@ $(() => {
                     .next('.catalog-dropdown')
                     .slideToggle();
             });
-            $('.catalog-dropdown__link > svg').on('click', function () {
+            $('.catalog-dropdown__link > svg').on('click', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
                 $(this)
                     .parent('.catalog-dropdown__link')
                     .toggleClass('active')
@@ -28678,6 +28686,21 @@ $(() => {
     });
 
     $('.js-toggle-menu').on('click', function () {
+
+        if (($(this).hasClass('header-burger--active'))) {
+            $('.js-toggle-catalog').removeClass('active');
+            $('.catalog-link').removeClass('active');
+            $('.catalog-dropdown__link').removeClass('active');
+            $('.header-nav__link').removeClass('active');
+            $('.header-nav__dropdown-link').removeClass('active');
+
+            $('.catalog').hide();
+            $('.catalog-dropdown').hide();
+            $('.catalog-subdropdown').hide();
+            $('.header-nav__dropdown').hide();
+            $('.header-nav__subdropdown').hide();
+        }
+
         $('body').toggleClass('is-loading');
         $('.header-menu').toggleClass('header-menu--active');
         $('.header').toggleClass('header--active');
