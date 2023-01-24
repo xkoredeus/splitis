@@ -27683,8 +27683,15 @@ $(() => {
 
     initTabs();
 
-    $(window).bind('resize',function(){
-        initTabs();
+
+
+    var oldWidth = $(window).width();
+    $(window).bind('resize', function () {
+        var nw = $(window).width();
+        if (oldWidth !== nw) {
+            initTabs();
+        }
+        oldWidth = nw;
     });
 
 });
@@ -27761,9 +27768,14 @@ $(() => {
 
     initFilters();
 
-    $(window).bind('resize',function(){
-        initSlider();
-        initFilters();
+    var oldWidth = $(window).width();
+    $(window).bind('resize', function () {
+        var nw = $(window).width();
+        if (oldWidth !== nw) {
+            initSlider();
+            initFilters();
+        }
+        oldWidth = nw;
     });
 
 });
@@ -28688,9 +28700,14 @@ $(() => {
 
     initHeader();
 
-    $(window).bind('resize',function() {
+    var oldWidth = $(window).width();
 
-        initHeader();
+    $(window).bind('resize', function () {
+        var nw = $(window).width();
+        if (oldWidth !== nw) {
+            initHeader();
+        }
+        oldWidth = nw;
     });
 
     $('.js-toggle-menu').on('click', function () {
