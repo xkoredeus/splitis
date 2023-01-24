@@ -9,6 +9,8 @@ select {
   -moz-appearance: none;
   text-indent: 1px;
   text-overflow: '';
+  color: $dark !important;
+  background: $tr !important;
 }
 option {
   color: $dark;
