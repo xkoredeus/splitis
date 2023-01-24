@@ -114,17 +114,19 @@ sup {
   //overflow: hidden;
   min-height: 100vh;
 
+  @include r($breakpoint-3) {
+    padding-top: calc(55px + 20px);
+    padding-bottom: 65px;
+  }
+
+  @include r($breakpoint-4) {
+    padding-top: calc(46px + 20px);
+    padding-bottom: 58px;
+  }
+
   &__in {
     position: relative;
     flex-grow: 1;
-
-    @include r($breakpoint-3) {
-      padding-top: calc(55px + 20px);
-    }
-
-    @include r($breakpoint-4) {
-      padding-top: calc(46px + 20px);
-    }
   }
 }
 
