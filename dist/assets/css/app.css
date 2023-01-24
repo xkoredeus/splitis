@@ -26242,6 +26242,7 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  color: #1A1E24;
 }
 
 .header-location:hover {
@@ -26276,6 +26277,18 @@ a:hover {
   .socials,
   .header-geo {
     gap: 10px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .header-geo {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
 }
 
@@ -26814,7 +26827,7 @@ a:hover {
 @media only screen and (max-width: 576px) {
   .header-menu {
     top: 45px;
-    height: calc(100vh - 46px - 57px);
+    height: calc(100vh - 46px - 56px);
   }
 }
 
@@ -26859,6 +26872,13 @@ a:hover {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 20px;
+}
+
+@media only screen and (max-width: 976px) {
+  .header-menu__in {
+    padding-top: 10px;
+    padding-bottom: 50px;
+  }
 }
 
 .header-menu .header-top {

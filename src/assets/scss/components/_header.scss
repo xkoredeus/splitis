@@ -56,6 +56,7 @@
 .header-location {
   display: flex;
   align-items: center;
+  color: $dark;
 
   &:hover {
     color: $red;
@@ -76,6 +77,13 @@
 
   @include r($breakpoint-2) {
     gap: 10px;
+  }
+}
+
+.header-geo {
+  @include r($breakpoint-4) {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 
@@ -485,7 +493,7 @@
 
   @include r($breakpoint-4) {
     top: 45px;
-    height: calc(100vh - 46px - 57px);
+    height: calc(100vh - 46px - 56px);
   }
 
   svg {
@@ -520,6 +528,11 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+
+    @include r($breakpoint-3) {
+      padding-top: 10px;
+      padding-bottom: 50px;
+    }
   }
 
   .header-top {

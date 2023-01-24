@@ -28681,7 +28681,8 @@ $(() => {
 
     initHeader();
 
-    $(window).bind('resize',function(){
+    $(window).bind('resize',function() {
+
         initHeader();
     });
 
