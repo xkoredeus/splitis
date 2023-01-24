@@ -1,0 +1,53 @@
+{{> crumbs }}
+
+<section class="section--inner pt-0">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+
+                {{> cabinet-nav }}
+
+            </div>
+            <div class="col-md-9">
+                <div class="title-h2 font-demibold spacing-3">Обратная связь</div>
+                <p class="spacing-3 lh14">Свяжитесь с нами, если хотите узнать больше о наших услугах или получить расчет стоимости. Наши сотрудники всегда готовы ответить вам по электронной почте или по телефону</p>
+                <div class="row">
+                    <div class="col-md-6 col-sm-8">
+                        <form>
+                            <div class="d-flex flex-column gap-15 spacing-2">
+                                <label class="form-field">
+                                    <span class="form-field__label">Ваше имя</span>
+                                    <input type="text" class="form-field__input" value="Иванов Иван Иванович">
+                                </label>
+                                <label class="form-field">
+                                    <span class="form-field__label">Телефон</span>
+                                    <input type="email" class="form-field__input js-tel" value="+7 956 654-55-33">
+                                </label>
+                                <label class="form-field">
+                                    <span class="form-field__label">Email</span>
+                                    <input type="email" class="form-field__input" value="email@example.com">
+                                </label>
+                                <label class="form-field form-field--select">
+                                    <span class="form-field__label">Тема обращения</span>
+                                    <select class="js-select">
+                                        <option>Проблемы с оформлением заказа</option>
+                                        <option>Проблемы с оформлением заказа 2</option>
+                                        <option>Проблемы с оформлением заказа 3</option>
+                                    </select>
+                                </label>
+                                <label class="form-field form-field-textarea">
+                                    <span class="form-field__label">Ваше сообщение</span>
+                                    <textarea rows="10" placeholder="Текст сообщения"></textarea>
+                                </label>
+                            </div>
+                            <div class="d-flex flex-column flex-sm-row align-items-sm-center gap-20">
+                                <button type="submit" class="button button-secondary">Отправить</button>
+                                <div class="color-gray2 text3">Заполняя форму вы соглашаетесь на <a href="#" class="link-gray2">обработку персональных данных</a></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,112 @@
+{{> crumbs }}
+
+<div class="container">
+    <div class="spacing-1">
+        <div class="d-flex align-items-lg-end justify-content-between flex-column flex-lg-row gap-20">
+            <div>
+                <div class="title-h2 font-demibold spacing-3">Контакты</div>
+                <div>
+                    Ваш регион
+
+                    <a href="#" class="link-blue link-blue-svg-fill">
+                        <span>Москва</span>
+                        <svg width="24" height="24">
+                            <use xlink:href="#chevron-bottom"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="d-flex flex-column align-items-start align-items-sm-center flex-sm-row gap-10 gap-xs-10">
+                <a href="#" class="common-link-white d-flex align-items-center gap-5">
+                    <svg width="22" height="22">
+                        <use xlink:href="#vk-link"></use>
+                    </svg>
+                    <span>Группа Вконтакте</span>
+                </a>
+                <a href="#" class="common-link-white d-flex align-items-center gap-5">
+                    <svg width="22" height="22">
+                        <use xlink:href="#tg-link"></use>
+                    </svg>
+                    <span>Написать в&nbsp;Telegram</span>
+                </a>
+                <a href="#" class="common-link-white d-flex align-items-center gap-5">
+                    <svg width="22" height="22">
+                        <use xlink:href="#ws-link"></use>
+                    </svg>
+                    <span>Написать в&nbsp;Whatsapp</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section--inner pt-0">
+    <div class="container">
+        <div class="d-flex flex-column gap-xs-10 gap-30 flex-md-row spacing-1">
+            <div class="d-flex flex-column align-items-start gap-5">
+                <a href="tel:+7 495 369-03-95" class="font-demibold title-h6">+7 495 369-03-95</a>
+                <div class="text2 color-gray3">Пункт выдачи заказов</div>
+            </div>
+            <div class="d-flex flex-column align-items-start gap-5">
+                <a href="mailto:sales@splitis.ru" class="font-demibold title-h6">sales@splitis.ru</a>
+                <div class="text2 color-gray3">Email</div>
+            </div>
+            <div class="d-flex flex-column align-items-start gap-5">
+                <div class="title-h6"><span class="font-demibold">г. Мытищи</span>, Веры Волошиной 19/16, офис 409</div>
+                <div class="text2 color-gray3">Адрес офиса</div>
+            </div>
+
+        </div>
+        <div id="map" class="map spacing-1"></div>
+
+        <div class="title-h6 font-bold spacing-4">Как добраться?</div>
+        <div class="lh14">Вход с торца здания сказать охраннику, чтобы открыл портал произнести ovus sorare nihil sancti mortum est 13 раз проткнуть лягушку отверткой (лягушка ваша) 3 этаж</div>
+    </div>
+</div>
+
+<div class="section--inner">
+    <div class="container">
+        <form class="contact-form spacing-1">
+            <div class="title-h4 font-demibold spacing-4">Обратная связь</div>
+            <div class="spacing-2">Наши сотрудники всегда готовы ответить вам по электронной почте или по телефону</div>
+            <div class="contact-form__in spacing-3">
+                <label class="form-field">
+                    <span class="form-field__label">Ваше имя</span>
+                    <input type="text" class="form-field__input" placeholder="Иванов Иван Иванович">
+                </label>
+                <label class="form-field">
+                    <span class="form-field__label">Телефон</span>
+                    <input type="email" class="form-field__input js-tel" placeholder="+7 956 654-55-33">
+                </label>
+                <label class="form-field">
+                    <span class="form-field__label">Email для счёта</span>
+                    <input type="email" class="form-field__input" placeholder="email@example.com">
+                </label>
+                <label class="form-field form-field-textarea">
+                    <span class="form-field__label">Ваше сообщение</span>
+                    <textarea rows="5"></textarea>
+                </label>
+            </div>
+
+            <div class="d-flex flex-column flex-sm-row align-items-sm-center gap-20">
+                <button type="submit" class="button button-secondary">Отправить</button>
+                <div class="color-gray2 text3">Заполняя форму вы соглашаетесь <br class="d-none d-lg-inline"> на <a href="#" class="link-gray2">обработку персональных данных</a></div>
+            </div>
+        </form>
+        <div class="cabinet-manager section-bg-gray gap-15 gap-lg-50 justify-content-md-start">
+            <div class="d-flex align-items-center gap-15">
+                <div class="cabinet-manager__picture">
+                    <img src="{{root}}assets/img/employees/employee-1.jpg" alt="Калинина Ольга">
+                </div>
+                <div class="d-flex flex-column gap-5">
+                    <div class="font-demibold">Ответственный за сайт</div>
+                    <div class="text2">Калинина Ольга</div>
+                </div>
+            </div>
+            <div class="cabinet-manager__info">
+                <a class="font-demibold" href="tel:8 (495) 189-71-28">8 (495) 189-71-28</a>
+                <a class="font-demibold" href="mailto:email@splitis.ru">email@splitis.ru</a>
+            </div>
+        </div>
+    </div>
+</div>

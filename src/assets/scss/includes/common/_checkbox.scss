@@ -1,0 +1,187 @@
+.checkbox {
+  cursor: pointer;
+  position: relative;
+  margin-bottom: 0;
+
+  &__text {
+    position: relative;
+    padding-left: 45px;
+    cursor: pointer;
+    width: 100%;
+    min-height: 30px;
+    display: flex;
+    align-items: center;
+    padding-top: 2px;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+
+    @include r($breakpoint-2) {
+      min-height: 20px;
+      padding-left: 30px;
+    }
+
+    svg {
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      fill: $white;
+      z-index: 1;
+      transform: translateY(2px);
+      @include ease-long;
+
+      @include r($breakpoint-2) {
+        width: 15px;
+        height: 15px;
+        left: 2.5px;
+        top: 2px;
+      }
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 30px;
+      height: 30px;
+      background-color: $white;
+      border: 1px solid $grayBorder1;
+      border-radius: 6px;
+
+      @include r($breakpoint-2) {
+        width: 20px;
+        height: 20px;
+        border-radius: 4px;
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 30px;
+      height: 30px;
+      background-color: $red;
+      opacity: 0;
+      transform: scale(.5);
+      transition: 0.3s;
+      border-radius: 6px;
+
+      @include r($breakpoint-2) {
+        width: 20px;
+        height: 20px;
+        border-radius: 4px;
+      }
+    }
+  }
+
+  input[type="checkbox"],
+  input[type="radio"] {
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    width: 100%;
+    cursor: pointer;
+    &:checked + .checkbox__text,
+    &:checked + .checkbox__text {
+      svg {
+        transform: translateY(0);
+      }
+      &::after {
+        opacity: 1;
+        transform: scale(1);
+      }
+      &::before {
+        background-color: #fff;
+      }
+    }
+  }
+}
+
+.radio {
+  cursor: pointer;
+  position: relative;
+  margin-bottom: 0;
+
+  &__text {
+    position: relative;
+    padding-left: 45px;
+    cursor: pointer;
+    width: 100%;
+    min-height: 30px;
+    display: flex;
+    align-items: center;
+    padding-top: 2px;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+
+    @include r($breakpoint-2) {
+      min-height: 20px;
+      padding-left: 30px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 30px;
+      height: 30px;
+      background-color: $white;
+      border: 1px solid $grayBorder1;
+      border-radius: 50%;
+
+      @include r($breakpoint-2) {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 7px;
+      left: 7px;
+      width: 16px;
+      height: 16px;
+      background-color: $red;
+      opacity: 0;
+      transform: scale(.5);
+      transition: 0.3s;
+      border-radius: 50%;
+
+      @include r($breakpoint-2) {
+        width: 10px;
+        height: 10px;
+        top: 5px;
+        left: 5px;
+      }
+    }
+  }
+
+  input[type="checkbox"],
+  input[type="radio"] {
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    width: 100%;
+    cursor: pointer;
+    &:checked + .radio__text,
+    &:checked + .radio__text {
+      svg {
+        transform: translateY(0);
+      }
+      &::after {
+        opacity: 1;
+        transform: scale(1);
+      }
+      &::before {
+        background-color: #fff;
+      }
+    }
+  }
+
+}

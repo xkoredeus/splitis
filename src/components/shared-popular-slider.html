@@ -1,0 +1,41 @@
+<div class="common-slider__wrapper common-slider__wrapper-cards">
+    <div class="common-slider__in js-popular-slider">
+        <div class="swiper-wrapper common-slider">
+            <div class="swiper-slide">
+                {{> item}}
+            </div>
+            <div class="swiper-slide">
+                {{> item}}
+            </div>
+            <div class="swiper-slide">
+                {{> item-label}}
+            </div>
+            <div class="swiper-slide">
+                {{> item}}
+            </div>
+            <div class="swiper-slide">
+                {{> item}}
+            </div>
+            <div class="swiper-slide">
+                {{> item}}
+            </div>
+        </div>
+    </div>
+
+    <div class="common-slider__nav swiper-nav">
+        <button class="js-popular-slider-prev">
+            <svg width="34" height="34">
+                <use xlink:href="#chevron-left"></use>
+            </svg>
+        </button>
+        <button class="js-popular-slider-next">
+            <svg width="34" height="34">
+                <use xlink:href="#chevron-right"></use>
+            </svg>
+        </button>
+    </div>
+
+    <div class="swiper-pagination__wrapper">
+        <div class="swiper-pagination js-popular-slider-pagination"></div>
+    </div>
+</div>

@@ -1,0 +1,161 @@
+{{> crumbs }}
+
+<section class="section--inner pt-0">
+    <div class="container">
+        <div class="d-flex flex-column justify-content-between gap-10 align-items-start flex-lg-row align-items-lg-center spacing-1">
+            <div class="title-h2 font-demibold">Сравнение товаров</div>
+
+            <div class="d-flex flex-column gap-20 align-items-start align-items-sm-center flex-sm-row gap-xs-10">
+                <label class="checkbox">
+                    <input type="checkbox" checked>
+                    <span class="checkbox__text">
+                        <svg width="24" height="24">
+                            <use xlink:href="#check"></use>
+                        </svg>
+                        <span>Показывать только отличия</span>
+                    </span>
+                </label>
+
+                <button class="link link-svg-fill d-flex align-items-center">
+                    <span class="font-medium">Очистить список</span>
+                    <svg width="24" height="24">
+                        <use xlink:href="#cross"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div class="compare-grid__wrapper">
+            <div class="compare-top section--inner pt-0">
+                <div class="compare-grid">
+                    <div class="item-favorites-compare">
+
+                        {{> item-favorites }}
+
+                    </div>
+                    <div class="item-favorites-compare">
+
+                        {{> item-favorites }}
+
+                    </div>
+                    <div class="item-favorites-compare">
+
+                        {{> item-favorites }}
+
+                    </div>
+                    <div class="item-favorites-compare">
+
+                        {{> item-favorites }}
+
+                    </div>
+                </div>
+            </div>
+            <div class="section--inner pb-0">
+            <div class="d-flex flex-column gap-20 gap-xs-10">
+                <div class="compare-item">
+                    <div class="color-gray3 text2 spacing-4">Страна</div>
+                    <div class="compare-grid">
+                        <div class="compare-row__item">Италия</div>
+                        <div class="compare-row__item">Италия</div>
+                        <div class="compare-row__item">Италия</div>
+                        <div class="compare-row__item">Италия</div>
+                    </div>
+                </div>
+                <div class="compare-item">
+                    <div class="color-gray3 text2 spacing-4">Гарантия</div>
+                    <div class="compare-grid">
+                        <div class="compare-row__item">5 лет</div>
+                        <div class="compare-row__item">5 лет</div>
+                        <div class="compare-row__item">5 лет</div>
+                        <div class="compare-row__item">5 лет</div>
+                    </div>
+                </div>
+                <div class="compare-item">
+                    <div class="color-gray3 text2 spacing-4">Хладагент</div>
+                    <div class="compare-grid">
+                        <div class="compare-row__item">R 410A</div>
+                        <div class="compare-row__item">R 410A</div>
+                        <div class="compare-row__item">R 410A</div>
+                        <div class="compare-row__item">R 410A</div>
+                    </div>
+                </div>
+                <div class="compare-item">
+                    <div class="color-gray3 text2 spacing-4">Максимальная длина коммуникаций</div>
+                    <div class="compare-grid">
+                        <div class="compare-row__item">20 м</div>
+                        <div class="compare-row__item">20 м</div>
+                        <div class="compare-row__item">20 м</div>
+                        <div class="compare-row__item">20 м</div>
+                    </div>
+                </div>
+                <div class="compare-item">
+                    <div class="color-gray3 text2 spacing-4">Максимальный перепад высот</div>
+                    <div class="compare-grid">
+                        <div class="compare-row__item">8 м</div>
+                        <div class="compare-row__item">8 м</div>
+                        <div class="compare-row__item">8 м</div>
+                        <div class="compare-row__item">8 м</div>
+                    </div>
+                </div>
+                <div class="compare-item">
+                    <div class="color-gray3 text2 spacing-4">Тип</div>
+                    <div class="compare-grid">
+                        <div class="compare-row__item">Сплит-систем</div>
+                        <div class="compare-row__item">Сплит-систем</div>
+                        <div class="compare-row__item">Сплит-систем</div>
+                        <div class="compare-row__item">Сплит-систем</div>
+                    </div>
+                </div>
+                <div class="compare-item">
+                    <div class="color-gray3 text2 spacing-4">Размещение</div>
+                    <div class="compare-grid">
+                        <div class="compare-row__item">Настенное</div>
+                        <div class="compare-row__item">Настенное</div>
+                        <div class="compare-row__item">Настенное</div>
+                        <div class="compare-row__item">Настенное</div>
+                    </div>
+                </div>
+                <div class="compare-item">
+                    <div class="color-gray3 text2 spacing-4">Площадь помещения</div>
+                    <div class="compare-grid">
+                        <div class="compare-row__item">18 м<sup>2</sup></div>
+                        <div class="compare-row__item">18 м<sup>2</sup></div>
+                        <div class="compare-row__item">18 м<sup>2</sup></div>
+                        <div class="compare-row__item">18 м<sup>2</sup></div>
+                    </div>
+                </div>
+                <div class="compare-item">
+                    <div class="color-gray3 text2 spacing-4">Охлаждение</div>
+                    <div class="compare-grid">
+                        <div class="compare-row__item">Есть</div>
+                        <div class="compare-row__item">Есть</div>
+                        <div class="compare-row__item">Есть</div>
+                        <div class="compare-row__item">Есть</div>
+                    </div>
+                </div>
+                <div class="compare-item">
+                    <div class="color-gray3 text2 spacing-4">Обогрев</div>
+                    <div class="compare-grid">
+                        <div class="compare-row__item">Есть</div>
+                        <div class="compare-row__item">Есть</div>
+                        <div class="compare-row__item">Есть</div>
+                        <div class="compare-row__item">Есть</div>
+                    </div>
+                </div>
+                <div class="compare-item">
+                    <div class="color-gray3 text2 spacing-4">Осушение</div>
+                    <div class="compare-grid">
+                        <div class="compare-row__item">Есть</div>
+                        <div class="compare-row__item">Есть</div>
+                        <div class="compare-row__item">Есть</div>
+                        <div class="compare-row__item">Есть</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</section>
+
+{{> feed }}
+

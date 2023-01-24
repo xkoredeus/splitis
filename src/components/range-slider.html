@@ -1,0 +1,38 @@
+<label class="form-field form-field--bg form-field--range w-100">
+    <span class="form-field__label">Площадь помещения</span>
+    <span class="form-field--range__list">
+        <span class="form-field--range__item">
+            <span class="color-gray1">от</span>
+            <span class="form-field--range__input">
+                <span class="input-text"></span>
+                <input class="js-range-input js-range-input-from" min="10" max="300" type="number" value="10">
+            </span>
+            <span>м<sup>2</sup></span>
+        </span>
+        <span class="form-field--range__divider"></span>
+        <span class="form-field--range__item">
+            <span class="color-gray1">до</span>
+            <span class="form-field--range__input">
+                <span class="input-text"></span>
+                <input class="js-range-input js-range-input-to" min="10" max="300" type="number" value="50">
+            </span>
+            <span>м<sup>2</sup></span>
+        </span>
+    </span>
+    <span class="js-range-slider mdc-slider mdc-slider--range">
+        <input class="mdc-slider__input js-range-slider__input-from" type="range" min="10" max="300" value="10" step="5" name="rangeStart" aria-label="range slider">
+        <input class="mdc-slider__input js-range-slider__input-to" type="range" min="20" max="300" value="50" step="5" name="rangeEnd" aria-label="range slider">
+        <span class="mdc-slider__track">
+            <span class="mdc-slider__track--inactive"></span>
+            <span class="mdc-slider__track--active">
+                <span class="mdc-slider__track--active_fill"></span>
+            </span>
+        </span>
+        <span class="mdc-slider__thumb">
+            <span class="mdc-slider__thumb-knob"></span>
+        </span>
+        <span class="mdc-slider__thumb">
+            <span class="mdc-slider__thumb-knob"></span>
+        </span>
+    </span>
+</label>

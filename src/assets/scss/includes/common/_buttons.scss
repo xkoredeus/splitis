@@ -1,0 +1,307 @@
+button {
+  border: none;
+  outline: none;
+  box-shadow: unset;
+  background: none;
+  padding: 0;
+}
+
+.button {
+  font-family: $font-medium;
+  position: relative;
+  display: inline-block;
+  padding: 18px 30px;
+  text-align: center;
+  @include ease-long;
+  border-radius: $radius;
+
+  &-small {
+    padding: 12px 18px;
+
+    @include r($breakpoint-3) {
+      padding: 6px 12px;
+    }
+  }
+
+  &-extra-small {
+    @include text2;
+    padding: 5px 10px;
+  }
+
+  @include r($breakpoint-3) {
+    padding: 14px 20px;
+  }
+
+
+  &-primary {
+    color: $white;
+    background-color: $blue;
+
+    &:hover {
+      color: $white;
+      background-color: #0997FF;
+    }
+
+    &-outlined {
+      color: $blue;
+      border: 1px solid $blue;
+
+      &:hover {
+        color: #0997FF;
+        border-color: #0997FF;
+      }
+    }
+  }
+
+  &-secondary {
+    color: $white;
+    background-color: $red;
+
+    &-outlined {
+      color: $red;
+      border: 1px solid $red;
+
+      &:hover {
+        color: #F82A56;
+        border-color: #F82A56;
+      }
+    }
+
+    &:hover {
+      color: $white;
+      background-color: #F82A56;
+    }
+  }
+
+  &-tertiary {
+    color: $blue;
+    background-color: $blueBg;
+
+    &-icon-fill {
+      svg {
+        @include ease-long;
+        fill: $blue;
+      }
+    }
+
+    &:hover {
+      color: $white;
+      background-color: $blue;
+
+      .button-tertiary-icon-fill {
+        svg {
+          fill: $white;
+        }
+      }
+    }
+  }
+
+  &-quaternary {
+    color: $red;
+    background-color: $redBg;
+
+    &:hover {
+      color: $white;
+      background-color: $red;
+    }
+  }
+
+  &-quinary {
+    background-color: $green;
+    color: $white;
+
+    &:hover {
+      background-color: #228d39;
+      color: $white;
+    }
+  }
+
+  &--xs-100 {
+    @include r($breakpoint-4) {
+      width: 100%;
+    }
+  }
+}
+
+.button-link {
+  &-tertiary {
+    color: $blue;
+    &:hover {
+      color: #0997FF;
+    }
+  }
+}
+
+.link {
+  color: $red;
+
+  &:hover {
+    color: $dark;
+  }
+}
+
+.link-svg-fill {
+  svg {
+    @include ease;
+    fill: $red;
+  }
+
+  &:hover {
+    svg {
+      fill: $dark;
+    }
+  }
+}
+
+.link-dark {
+  color: $dark;
+
+  &:hover {
+    color: $red;
+  }
+}
+
+.link-blue {
+  color: $blue;
+
+  &:hover {
+    color: $dark;
+  }
+
+  &-svg-fill {
+    svg {
+      @include ease-long;
+      fill: $blue;
+    }
+
+    &:hover {
+      svg {
+        fill: $dark;
+      }
+    }
+  }
+}
+
+.link-gray3 {
+  color: $grayText3;
+}
+
+.link-gray2 {
+  color: $grayText2;
+}
+
+.link-icon {
+  display: inline-flex;
+  align-items: center;
+  color: $red;
+
+  svg {
+    fill: $red;
+    @include ease;
+    margin-left: 10px;
+  }
+
+  &:hover {
+    color: $dark;
+
+    svg {
+      fill: $dark;
+    }
+  }
+}
+
+.common-link {
+  background-color: #EEEEF2;
+  border-radius: $radius3;
+  color: $grayText2;
+  padding: 9px 25px 10px;
+  cursor: pointer;
+  @include ease-long;
+  display: inline-block;
+
+  @include r($breakpoint-3) {
+    padding: 6px 15px 8px;
+  }
+
+  &:hover {
+    background-color: $redBg;
+    color: $red;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    @include r($breakpoint-3) {
+      gap: 7px;
+    }
+  }
+}
+
+.common-link-white {
+  border: 1px solid $grayBorder1;
+  border-radius: $radius;
+  padding: 12px 25px 12px;
+  cursor: pointer;
+  @include ease-long;
+  display: inline-block;
+
+  @include r($breakpoint-3) {
+    padding: 6px 15px 8px;
+  }
+
+  &:hover {
+    background-color: $redBg;
+    border-color: $redBg;
+    color: $red;
+  }
+}
+
+.contact-form {
+  padding: 30px;
+  border-radius: $radius3;
+  background-color: $grayBg;
+
+  @include r($breakpoint-3) {
+    padding: 20px;
+    border-radius: $radius2;
+  }
+
+  &__in {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+
+    @include r($breakpoint-35) {
+      grid-template-columns: auto;
+      gap: 10px;
+    }
+
+    .form-field-textarea {
+      grid-row: 1/4;
+      grid-column: 2/3;
+
+      @include r($breakpoint-35) {
+        grid-row: auto;
+        grid-column: auto;
+      }
+    }
+  }
+}
+
+.leaf {
+  padding: 30px;
+  border-radius: $radius3;
+  background-color: $grayBg;
+
+  @include r($breakpoint-2) {
+    padding: 20px;
+    border-radius: $radius2;
+  }
+
+  @include r($breakpoint-4) {
+    padding: 15px;
+    border-radius: $radius;
+  }
+}

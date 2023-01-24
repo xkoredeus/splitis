@@ -1,0 +1,226 @@
+.item-favorites {
+  position: relative;
+  display: grid;
+  grid-row-gap: 15px;
+  max-width: 289px;
+
+  @include r($breakpoint-2) {
+    max-width: unset;
+  }
+  &:hover {
+    z-index: 2;
+
+    &::before {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+  }
+
+  @include r($breakpoint-4) {
+    grid-row-gap: 6px;
+  }
+
+  &__in {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__label {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 5px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+
+    @include r($breakpoint-2) {
+      top: 10px;
+      left: 10px;
+    }
+
+    &--new {
+      color: $blue;
+      background-color: $white;
+      @include text2;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    @include ease;
+
+    &-button {
+      width: 40px;
+      height: 40px;
+      @include flex-center;
+
+      @include r($breakpoint-2) {
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    &-fav {
+      &:hover {
+        svg {
+          stroke: $dark;
+        }
+      }
+      svg {
+        stroke: $grayText1;
+        @include ease;
+      }
+
+      &.active {
+        svg {
+          stroke: $red;
+        }
+      }
+    }
+
+    &-stat {
+      &:hover {
+        svg {
+          fill: $dark;
+        }
+      }
+      svg {
+        fill: $grayText1;
+        @include ease;
+      }
+      &.active {
+        svg {
+          fill: $red;
+        }
+      }
+    }
+  }
+
+  &__picture {
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: $radius;
+
+    @include r($breakpoint-4) {
+      max-width: 150px;
+    }
+
+    &-wrapper {
+      @include flex-center;
+      overflow: hidden;
+      margin-bottom: 25px;
+      max-height: 289px;
+
+      @include r($breakpoint-2) {
+        background-color: #f9f9f9;
+        border-radius: $radius;
+        margin-bottom: 15px;
+        max-height: 280px;
+      }
+    }
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    &-additional {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    @include r($breakpoint-2) {
+      gap: 10px;
+    }
+  }
+
+  &__stat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+
+    @include r($breakpoint-2) {
+      gap: 10px;
+    }
+  }
+
+  &__rating {
+    display: flex;
+    align-items: center;
+    gap: 6.5px;
+  }
+
+  &__availability {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  &__char {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    @include r($breakpoint-2) {
+      gap: 7px;
+    }
+
+    &-row {
+      @include text2;
+      display: grid;
+      grid-template-columns: 1fr 0.3fr;
+      grid-column-gap: 10px;
+
+      @include r($breakpoint-3) {
+        grid-column-gap: 6px;
+      }
+
+      & > *:first-child {
+        color: $grayText3;
+      }
+
+      & > *:last-child {
+        text-align: right;
+      }
+
+      @include r(600) {
+        grid-template-columns: 1fr 0.25fr;
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 25px;
+
+    @include r($breakpoint-2) {
+      margin-top: 15px;
+    }
+
+    .button {
+      flex-grow: 1;
+    }
+  }
+}
+
+@keyframes zIndex {
+  to {
+    z-index: 5;
+  }
+}

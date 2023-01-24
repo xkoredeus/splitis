@@ -1,0 +1,28 @@
+.footer {
+  border-top: 1px solid $grayBorder1;
+}
+
+.footer-top {
+  padding: 50px 0;
+
+  @include r($breakpoint-2) {
+    padding: 25px 0;
+
+    .gap-30 {
+      gap: 15px;
+    }
+
+    .gap-20 {
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.footer-bottom {
+  padding: 20px 0;
+
+  @include r($breakpoint-4) {
+    font-size: 12px;
+  }
+}

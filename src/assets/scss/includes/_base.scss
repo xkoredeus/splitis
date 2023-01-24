@@ -1,0 +1,185 @@
+@import "mixins";
+@import "fonts";
+@import "common/breakpoints";
+@import "common/fonts";
+@import "common/titles";
+@import "common/colors";
+@import "common/one-classes";
+@import "common/selections";
+@import "common/states";
+@import "common/inputs";
+@import "common/checkbox";
+@import "common/section";
+@import "common/swiper-custom";
+@import "common/buttons";
+@import "common/popup";
+
+html, body {
+  position: relative;
+  font-family: $font-regular, Roboto, sans-serif;
+  @include text;
+  line-height: 1.2;
+  color: $dark;
+  background-color: $white;
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+
+  @include scroll;
+
+  &.is-loading {
+    overflow: hidden;
+
+    @include rmin($breakpoint-2) {
+      padding-right: 15px;
+    }
+  }
+}
+
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+}
+$container: 1236px;
+
+@mixin container {
+  max-width: $container;
+}
+/* Custom animation */
+.fancybox-slide--html {
+  padding: 0;
+}
+.fancybox-fx-slide-in-in.fancybox-slide--next,
+.fancybox-fx-slide-in-in.fancybox-slide--previous {
+  transform: translateX(100%);
+}
+
+.fancybox-fx-slide-in-in.fancybox-slide--current {
+  transform: translateX(0);
+}
+
+sup {
+  font-size: 0.65em;
+  top: -0.7em;
+}
+
+.list {
+  li {
+    margin-bottom: 10px;
+    list-style-type: disc;
+
+    ul {
+      margin-top: 10px;
+    }
+  }
+}
+
+.list-decor {
+  padding-left: 0;
+
+  li {
+    position: relative;
+    margin-bottom: 20px;
+    list-style-type: none;
+    padding-left: 36px;
+
+    @include r($breakpoint-35) {
+      padding-left: 32px;
+    }
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 22px;
+      height: 22px;
+      @include ct;
+      left: 0;
+      top: 5px;
+      background-image: url('../img/logo-circle.svg');
+
+      @include r($breakpoint-35) {
+        top: 2px;
+      }
+    }
+  }
+}
+
+.container {
+  @include container;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  //overflow: hidden;
+  min-height: 100vh;
+
+  &__in {
+    position: relative;
+    flex-grow: 1;
+
+    @include r($breakpoint-3) {
+      padding-top: calc(55px + 20px);
+    }
+
+    @include r($breakpoint-4) {
+      padding-top: calc(46px + 20px);
+    }
+  }
+}
+
+.tooltip-link {
+  cursor: pointer;
+}
+
+.svg-sprite {
+  position: absolute;
+  bottom: 0;
+}
+
+a {
+  color: $dark;
+  @include ease-long;
+
+  &:hover {
+    color: $red;
+  }
+}
+
+.mdc-tooltip {
+
+  .mdc-tooltip__surface {
+    max-width: 632px;
+    white-space: normal;
+    padding: 30px;
+
+    @include text2;
+    line-height: 1.2;
+    text-align: left;
+    color: $dark;
+
+    box-shadow: 0 4px 40px rgba(0, 0, 0, 0.1);
+    background: $white;
+    border-radius: 20px;
+
+    @include r($breakpoint-2) {
+      padding: 15px;
+      border-radius: $radius;
+    }
+  }
+}
+
+.popup-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+
+  @include r($breakpoint-2) {
+    gap: 20px;
+  }
+
+  & > div {
+    display: block !important;
+  }
+}

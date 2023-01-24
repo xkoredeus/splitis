@@ -1,0 +1,114 @@
+$title-h1: 42px;
+$title-h2: 40px;
+$title-h3: 32px;
+$title-h4: 28px;
+$title-h5: 24px;
+$title-h6: 20px;
+
+$text: 18px;
+$text2: 16px;
+$text25: 15px;
+$text3: 14px;
+
+@mixin title-h1 {
+  font-size: $title-h1;
+
+  @include r($breakpoint-2) {
+    font-size: 32px;
+  }
+  @include r($breakpoint-4) {
+    font-size: 26px;
+  }
+}
+@mixin title-h2 {
+  font-size: $title-h2;
+
+  @include r($breakpoint-2) {
+    font-size: 30px;
+  }
+  @include r($breakpoint-4) {
+    font-size: 24px;
+  }
+}
+@mixin title-h3 {
+  font-size: $title-h3;
+
+  @include r($breakpoint-2) {
+    font-size: 26px;
+  }
+  @include r($breakpoint-4) {
+    font-size: 23px;
+  }
+}
+@mixin title-h4 {
+  font-size: $title-h4;
+
+  @include r($breakpoint-2) {
+    font-size: 22px;
+  }
+
+  @include r($breakpoint-4) {
+    font-size: 20px;
+  }
+}
+@mixin title-h5 {
+  font-size: $title-h5;
+
+  @include r($breakpoint-2) {
+    font-size: 20px;
+  }
+
+  @include r($breakpoint-4) {
+    font-size: 18px;
+  }
+}
+@mixin title-h6 {
+  font-size: $title-h6;
+
+  @include r($breakpoint-2) {
+    font-size: 18px;
+  }
+
+  @include r($breakpoint-4) {
+    font-size: 16px;
+  }
+}
+@mixin text {
+  font-size: $text;
+
+  @include r($breakpoint-2) {
+    font-size: 14px;
+  }
+}
+@mixin text2 {
+  font-size: $text2;
+
+  @include r($breakpoint-2) {
+    font-size: 13px;
+  }
+}
+@mixin text25 {
+  font-size: $text25;
+
+  @include r($breakpoint-2) {
+    font-size: 13px;
+  }
+}
+@mixin text3 {
+  font-size: $text3;
+
+  @include r($breakpoint-2) {
+    font-size: 12px;
+  }
+}
+
+.title-h1 { @include title-h1 }
+.title-h2 { @include title-h2 }
+.title-h3 { @include title-h3 }
+.title-h4 { @include title-h4 }
+.title-h5 { @include title-h5 }
+.title-h6 { @include title-h6 }
+.text { @include text }
+.text2 { @include text2 }
+.text25 { @include text25 }
+.text3 { @include text3 }

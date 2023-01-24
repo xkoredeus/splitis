@@ -1,0 +1,131 @@
+{{> crumbs }}
+
+
+<section class="section--inner pt-0">
+    <div class="container">
+        <div class="title-h2 font-demibold spacing-2">Новости и статьи</div>
+
+        <form class="search__in spacing-2">
+            <input type="text" class="search__input" placeholder="Поиск по новостям">
+            <button type="submit" class="search__button">
+                <svg width="34" height="34" >
+                    <use xlink:href="#search"></use>
+                </svg>
+            </button>
+        </form>
+
+        <div class="common-link__list spacing-2">
+            <a href="#" class="common-link-white blog-common-link">Недорогие</a>
+            <a href="#" class="common-link-white blog-common-link">Хиты продаж</a>
+            <a href="#" class="common-link-white blog-common-link">Для небольшой квартиры</a>
+            <a href="#" class="common-link-white blog-common-link">Корейские</a>
+            <a href="#" class="common-link-white blog-common-link">Настенные</a>
+            <a href="#" class="common-link-white blog-common-link">С двумя блоками</a>
+            <a href="#" class="common-link-white blog-common-link">Мощные</a>
+            <a href="#" class="common-link-white blog-common-link">Японские</a>
+            <a href="#" class="common-link-white blog-common-link">До 5 кВт</a>
+            <a href="#" class="common-link-white blog-common-link">С обогревом</a>
+            <a href="#" class="common-link-white blog-common-link">Инверторные</a>
+            <a href="#" class="common-link-white blog-common-link">Оконные</a>
+            <a href="#" class="common-link-white blog-common-link">Мобильные</a>
+        </div>
+
+        <div class="row spacing-4">
+            <div class="col-md-4 col-sm-6 mb-2 mb-md-3">
+
+                {{> blog-item }}
+
+            </div>
+            <div class="col-md-4 col-sm-6 mb-2 mb-md-3">
+
+                {{> blog-item }}
+
+            </div>
+            <div class="col-md-4 col-sm-6 mb-2 mb-md-3">
+
+                {{> blog-item }}
+
+            </div>
+            <div class="col-md-4 col-sm-6 mb-2 mb-md-3">
+
+                {{> blog-item }}
+
+            </div>
+            <div class="col-md-4 col-sm-6 mb-2 mb-md-3">
+
+                {{> blog-item }}
+
+            </div>
+            <div class="col-md-4 col-sm-6 mb-2 mb-md-3">
+
+                {{> blog-item }}
+
+            </div>
+
+            <div class="col-12 mb-2 mb-md-3">
+                <div class="feed" style="background-image: url('{{root}}assets/img/home/feed-bg.jpg');">
+                    <div class="row align-items-lg-center">
+                        <div class="col-lg-6">
+                            <div class="feed-info">
+                                <div class="font-bold title-h1 spacing-3">Наша новостная рассылка</div>
+                                <div class="font-medium title-h5 spacing-3">Мы высылаем самые интересные и полезные материалы за неделю. Без спама</div>
+                                <form class="feed-form feed-form--email spacing-3">
+                                    <label class="form-field">
+                                        <span class="form-field__label">Электронная почта</span>
+                                        <input type="email" class="form-field__input" placeholder="email@example.com">
+                                    </label>
+                                    <button type="submit" class="button button-secondary">Оставить заявку</button>
+                                </form>
+                                <div class="color-gray-border1 text3">Заполняя форму вы соглашаетесь на <a href="#" class="und feed-link">обработку персональных данных</a></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="d-flex justify-content-lg-center">
+                                <img src="{{root}}assets/img/feed-email-picture.png" alt="Есть вопросы? Ответим!">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 mb-2 mb-md-3">
+
+                {{> blog-item }}
+
+            </div>
+            <div class="col-md-4 col-sm-6 mb-2 mb-md-3">
+
+                {{> blog-item }}
+
+            </div>
+            <div class="col-md-4 col-sm-6 mb-2 mb-md-3">
+
+                {{> blog-item }}
+
+            </div>
+            <div class="col-md-4 col-sm-6 mb-2 mb-md-3">
+
+                {{> blog-item }}
+
+            </div>
+            <div class="col-md-4 col-sm-6 mb-2 mb-md-3">
+
+                {{> blog-item }}
+
+            </div>
+            <div class="col-md-4 col-sm-6 mb-2 mb-md-3">
+
+                {{> blog-item }}
+
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-center">
+
+            {{> pagination }}
+
+        </div>
+
+    </div>
+</section>
+

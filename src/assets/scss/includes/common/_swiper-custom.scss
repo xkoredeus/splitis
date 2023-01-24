@@ -1,0 +1,157 @@
+.swiper {
+  &-button {
+    &-prev,
+    &-next {
+      &::after {
+        display: none;
+      }
+
+      svg {
+        stroke: $grayText2;
+        @include ease;
+      }
+
+      &:hover {
+        svg {
+          stroke: $red;
+        }
+      }
+
+      &.swiper-button-disabled {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.swiper-pagination.swiper-pagination-bullets {
+  bottom: -30px;
+
+  @include r($breakpoint-2) {
+    bottom: -25px;
+  }
+}
+.swiper-pagination-bullet {
+  width: 58px;
+  height: 4px;
+  border-radius: 10px;
+  background-color: $grayBorder2;
+  opacity: 1;
+  @include ease-long;
+
+  @include r($breakpoint-2) {
+    width: 30px;
+  }
+
+  @include r($breakpoint-4) {
+    width: 20px;
+  }
+
+  &:not(:last-child) {
+    margin-right: 17px;
+
+    @include r($breakpoint-2) {
+      margin-right: 10px;
+    }
+  }
+
+  &-active {
+    background-color: $red;
+  }
+}
+
+.swiper-nav {
+  display: flex;
+  gap: 20px;
+  z-index: 1;
+
+  button {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    @include ease-long;
+    background-color: $grayBg;
+    border-radius: 50%;
+
+    svg {
+      fill: $blue;
+      @include ease-long;
+    }
+
+    &:hover {
+      //svg {
+      //  fill: #007EDA
+      //}
+    }
+
+    &:first-child:hover {
+      svg {
+        transform: translateX(-3px);
+      }
+    }
+
+    &:last-child:hover {
+      svg {
+        transform: translateX(3px);
+      }
+    }
+
+    &.swiper-button-disabled {
+      cursor: auto;
+      opacity: .5;
+      transform: translate(0) !important;
+
+      svg {
+        fill: $grayBorder2;
+      }
+
+    }
+  }
+}
+
+.swiper-scrollbar {
+  position: relative;
+  width: 100%;
+  height: 3px;
+  background: transparent;
+  border-radius: 5px;
+  overflow: hidden;
+
+  &::before {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+    background-color: #9B9B9B;
+  }
+
+  &:hover {
+    .swiper-scrollbar-drag {
+      transform: scaleX(1);
+    }
+  }
+}
+.swiper-scrollbar-drag {
+  background: #3E3E3E;
+  cursor: pointer;
+  transform-origin: bottom;
+  @include ease-long;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.swiper-scrollbar--white {
+  &::before {
+    background: #FEFEFE;
+  }
+
+  .swiper-scrollbar-drag {
+    background: #F7F7F7;
+  }
+}

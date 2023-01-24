@@ -1,0 +1,17 @@
+@import "includes/fancybox/jquery.fancybox.min";
+@import "includes/swiper/swiper.min";
+@import "includes/material/material-components.min";
+@import "includes/select2/select2.min";
+@import "includes/bs-grid/grid";
+@import "includes/base";
+
+@import "components/header";
+@import "components/footer";
+@import "components/pagination";
+@import "components/item";
+@import "components/item-togglable";
+@import "components/item-favorites";
+@import "components/crumbs";
+
+@import "pages/home";
+@import "pages/inner";

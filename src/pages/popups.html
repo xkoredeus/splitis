@@ -1,0 +1,71 @@
+<section class="section--inner">
+    <div class="container">
+        <div class="title-h2 font-demibold spacing-3">
+            <div>Модальные окна</div>
+        </div>
+        <div class="color-gray3 text2 spacing-1">(кнопка закрытия - крестик - инициализируется в модальном окне fancybox)</div>
+
+        <div class="popup-list">
+
+            {{> popups }}
+
+            <div class="w-100">
+                <div class="card-top">
+                    <div class="card-top__actions">
+                        <button class="card-top__rating">
+
+                            {{> rating }}
+
+                            <span class="color-gray3">25 отзывов</span>
+                        </button>
+                        <button class="link card-top__link js-card-toggle-compare active">
+                            <svg width="24" height="24">
+                                <use xlink:href="#stat"></use>
+                            </svg>
+                            <span class="color-gray3">В сравнении</span>
+                        </button>
+                        <div class="card-top__link-wrapper js-card-toggle-favorites-container">
+                            <button class="link card-top__link card-top__link--heart js-card-toggle-favorites active">
+                                <svg width="24" height="24">
+                                    <use xlink:href="#heart"></use>
+                                </svg>
+                                <span class="color-gray3">В избранном</span>
+                            </button>
+                            <div class="card-top__tooltip active">
+                                <div class="card-top__tooltip-in">
+                                    <div class="title-h5 spacing-4 font-demibold">Товар добавлен в&nbsp;избранное</div>
+                                    <div class="popup-card spacing-4">
+                                        <div class="popup-card__picture">
+                                            <img src="{{root}}assets/img/product.jpg" alt="Продукт">
+                                        </div>
+                                        <div class="d-flex flex-column align-items-start gap-5">
+                                            <a href="#">Green TSI/TSO-07 HRSY1</a>
+                                            <div class="d-flex align-items-center gap-10">
+                                                <div class="font-demibold">18 980 р</div>
+                                                <div class="color-gray2 tdlt">19 980 р</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="button button-secondary">Перейти избранное</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="link card-top__link">
+                            <svg width="24" height="24">
+                                <use xlink:href="#share"></use>
+                            </svg>
+                            <span class="color-gray3">Поделиться</span>
+                        </button>
+                    </div>
+                    <div>
+                        <span class="color-gray3">Артикул&nbsp;&nbsp;</span>
+                        <span>126424</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>

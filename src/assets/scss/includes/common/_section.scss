@@ -1,0 +1,73 @@
+.section {
+  &--inner {
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    @include r($breakpoint-3) {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+  }
+
+  &-bg-gray {
+    background-color: $grayBg !important;
+  }
+  &-bg-gradient {
+    background: linear-gradient(180deg, #F7F7F9 87.52%, $white 100%);
+  }
+  &-bg-blue {
+    background-color: $blueBg !important;
+  }
+}
+
+@mixin bg-gray {
+  background-color: $grayBg;
+}
+
+.spacing-1 {
+  margin-bottom: 40px;
+
+  @include r($breakpoint-2) {
+    margin-bottom: 30px;
+  }
+
+  @include r($breakpoint-3) {
+    margin-bottom: 20px;
+  }
+}
+
+.spacing-2 {
+  margin-bottom: 30px;
+
+  @include r($breakpoint-2) {
+    margin-bottom: 25px;
+  }
+
+  @include r($breakpoint-3) {
+    margin-bottom: 15px;
+  }
+}
+
+.spacing-3 {
+  margin-bottom: 20px;
+
+  @include r($breakpoint-2) {
+    margin-bottom: 15px;
+  }
+}
+
+.spacing-35 {
+  margin-bottom: 15px;
+
+  @include r($breakpoint-2) {
+    margin-bottom: 10px;
+  }
+}
+
+.spacing-4 {
+  margin-bottom: 10px;
+
+  @include r($breakpoint-2) {
+    margin-bottom: 6px;
+  }
+}

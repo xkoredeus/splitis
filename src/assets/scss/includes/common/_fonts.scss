@@ -1,0 +1,26 @@
+$font-regular: 'GolosText-Regular';
+$font-vf-regular: 'GolosTextVF-Regular';
+$font-medium: 'GolosText-Medium';
+$font-demibold: 'GolosText-DemiBold';
+$font-bold: 'GolosText-Bold';
+$font-black: 'GolosText-Black';
+
+
+.font-regular {
+  font-family: $font-regular;
+}
+.font-vf-regular {
+  font-family: $font-vf-regular;
+}
+.font-medium {
+  font-family: $font-medium;
+}
+.font-demibold {
+  font-family: $font-demibold;
+}
+.font-bold {
+  font-family: $font-bold;
+}
+.font-black {
+  font-family: $font-black;
+}

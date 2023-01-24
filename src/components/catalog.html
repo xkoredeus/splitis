@@ -1,0 +1,102 @@
+<div class="catalog-actions d-flex justify-content-between align-items-md-center align-items-start flex-column flex-md-row">
+    <select class="js-select-auto-width">
+        <option>Сначала дешёвые</option>
+        <option>Сначала дорогие</option>
+        <option>По рейтингу</option>
+        <option>По размеру скидки</option>
+    </select>
+
+    <div class="d-flex justify-content-between w-xs-100 justify-content-sm-start align-items-center gap-20 mt-3 mt-md-0">
+        <div class="color-gray2">Найдено товаров: 376</div>
+        <div class="catalog-switcher">
+            <input class="catalog-switcher__input js-switch-view" type="radio" checked name="switch-view" id="view-1">
+            <input class="catalog-switcher__input js-switch-view" type="radio" name="switch-view" id="view-2">
+
+            <span class="catalog-switcher__decoration"></span>
+
+            <label for="view-1" class="catalog-switcher__label">
+                <svg width="24" height="24">
+                    <use xlink:href="#cards"></use>
+                </svg>
+            </label>
+            <label for="view-2" class="catalog-switcher__label">
+                <svg width="24" height="24">
+                    <use xlink:href="#rows"></use>
+                </svg>
+            </label>
+        </div>
+    </div>
+</div>
+<div class="catalog-list">
+    <div class="row">
+        <div class="col-md-4 col-sm-6 item-togglable__wrapper">
+
+            {{> item-togglable }}
+
+        </div>
+        <div class="col-md-4 col-sm-6 item-togglable__wrapper">
+
+            {{> item-togglable }}
+
+        </div>
+        <div class="col-md-4 col-sm-6 item-togglable__wrapper">
+
+            {{> item-togglable }}
+
+        </div>
+        <div class="col-md-4 col-sm-6 item-togglable__wrapper">
+
+            {{> item-togglable }}
+
+        </div>
+        <div class="col-md-4 col-sm-6 item-togglable__wrapper">
+
+            {{> item-togglable }}
+
+        </div>
+        <div class="col-md-4 col-sm-6 item-togglable__wrapper">
+
+            {{> item-togglable }}
+
+        </div>
+    </div>
+    <section class="banner-in section--inner pt-0">
+
+        {{> banner }}
+
+    </section>
+    <div class="row">
+        <div class="col-md-4 col-sm-6 item-togglable__wrapper">
+
+            {{> item-togglable }}
+
+        </div>
+        <div class="col-md-4 col-sm-6 item-togglable__wrapper">
+
+            {{> item-togglable }}
+
+        </div>
+        <div class="col-md-4 col-sm-6 item-togglable__wrapper">
+
+            {{> item-togglable }}
+
+        </div>
+        <div class="col-md-4 col-sm-6 item-togglable__wrapper">
+
+            {{> item-togglable }}
+
+        </div>
+        <div class="col-md-4 col-sm-6 item-togglable__wrapper">
+
+            {{> item-togglable }}
+
+        </div>
+        <div class="col-md-4 col-sm-6 item-togglable__wrapper">
+
+            {{> item-togglable }}
+
+        </div>
+    </div>
+</div>
+
+{{> pagination }}

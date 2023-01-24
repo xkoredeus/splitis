@@ -1,0 +1,101 @@
+$dark: #1A1E24;
+$tr: transparent;
+$white: #fff;
+
+$red: #CB3958;
+$blue: #007EDA;
+$green: #19BF3E;
+
+
+$grayBorder1: #DEE1E5;
+$grayBorder2: #CFD3DA;
+$grayText1: #ADB3BE;
+$grayText2: #7F8A9B;
+$grayText3: #626D7D;
+
+$blueBg: #E4F4FF;
+$redBg: #FFEAEE;
+$grayBg: #F7F7F9;
+
+.color-white {
+  color: $white;
+}
+
+.color-red {
+  color: $red;
+}
+
+.color-red-hover {
+  @include ease-long;
+
+  &:hover {
+    color: #F82A56;
+  }
+}
+.fill-red {
+  fill: $red;
+}
+.fill-red-hover {
+  @include ease-long;
+  &:hover {
+    fill: $grayText2;
+  }
+}
+
+.fill-dark {
+  fill: $dark;
+}
+.fill-dark-hover {
+  @include ease-long;
+  &:hover {
+    fill: $red;
+  }
+}
+
+.stroke-dark {
+  stroke: $dark;
+}
+
+.stroke-dark-hover {
+  @include ease-long;
+  &:hover {
+    stroke: $red;
+  }
+}
+
+.color-blue {
+  color: $blue;
+}
+
+.color-gray1 {
+  color: $grayText1;
+}
+
+.color-dark {
+  color: $dark;
+}
+
+.color-gray2 {
+  color: $grayText2;
+}
+
+.color-gray3 {
+  color: $grayText3;
+}
+
+.color-gray-border1 {
+  color: $grayBorder1;
+}
+
+.fill-gray2 {
+  fill: $grayText2;
+}
+.fill-gray2-hover {
+  @include ease-long;
+  &:hover {
+    fill: $red;
+  }
+}
+.opacity-08 {
+  opacity: .8;
+}

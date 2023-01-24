@@ -1,0 +1,129 @@
+{{> crumbs }}
+
+<div class="container">
+    <div class="inner-title-with-result">
+        <span class="title-h2 font-demibold">
+            Сплит-системы
+        </span>
+        <span class="inner-title-with-result__number color-gray2 ">189</span>
+    </div>
+</div>
+<section class="section--inner">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+                <button class="filter-toggle__button button button-secondary w-xs-100 js-toggle-filter-modal">
+                    Показать фильты
+                </button>
+
+                {{> filter }}
+
+                <div id="filter" style="display: none" class="filter-popup"></div>
+            </div>
+            <div class="col-lg-9">
+                <div class="filter-applied__list spacing-1 w-100">
+                    <div class="filter-applied">
+                        <span>Инверторные</span>
+                        <button>
+                            <svg width="20" height="20">
+                                <use xlink:href="#cross"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="filter-applied">
+                        <span>Aeronik</span>
+                        <button>
+                            <svg width="20" height="20">
+                                <use xlink:href="#cross"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="filter-applied">
+                        <span>20 кВт</span>
+                        <button>
+                            <svg width="20" height="20">
+                                <use xlink:href="#cross"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="filter-applied">
+                        <span>до 25 000 р</span>
+                        <button>
+                            <svg width="20" height="20">
+                                <use xlink:href="#cross"></use>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <button class="link link-svg-fill">
+                        <span class="font-medium">Сбросить все</span>
+                        <svg width="20" height="20">
+                            <use xlink:href="#cross"></use>
+                        </svg>
+                    </button>
+                </div>
+
+                {{> catalog }}
+
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section--inner">
+    <div class="container">
+        <div class="font-demibold title-h3 spacing-1">Популярные бренды</div>
+
+        {{> brands-slider }}
+
+    </div>
+</section>
+<section class="section--inner">
+    <div class="container">
+        <div class="font-demibold title-h3 spacing-1">Популярные подборки</div>
+
+        {{> shared-selections }}
+
+    </div>
+</section>
+
+{{> shared-splits-by-type }}
+
+<section class="section--inner pb-0 ovh">
+    <div class="container">
+        <div class="font-demibold title-h3 spacing-1">Вы недавно смотрели</div>
+
+        {{> shared-popular-slider }}
+
+    </div>
+</section>
+<section class="section--inner pb-0 ovh">
+    <div class="container">
+        <div class="font-demibold title-h3 spacing-1">Хиты продаж</div>
+
+        {{> shared-best-slider }}
+
+    </div>
+</section>
+
+
+<section class="section--inner ">
+    <div class="container">
+        <div class="get-order section-bg-gray">
+            <div class="font-demibold title-h3 spacing-1">Как сделать заказ у нас на сайте?</div>
+
+            {{> get-order}}
+
+        </div>
+    </div>
+</section>
+
+
+{{> shared-last-reviews }}
+
+{{> feed }}
+
+{{> where }}
+
+{{> office }}
+
+{{> seo }}

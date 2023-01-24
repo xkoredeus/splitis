@@ -1,0 +1,78 @@
+.preloader {
+  &__wrapper {
+    background: #3E3E3E;
+    position: fixed;
+    height: 100vh;
+    min-height: 300px;
+    width: 100vw;
+    z-index: 300;
+  }
+
+  &__in {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    gap: 18px;
+  }
+
+  &__house {
+    position: relative;
+    height: 100%;
+    @include flex-center;
+    z-index: 1;
+
+    svg {
+      position: relative;
+      z-index: 1;
+    }
+
+    &-icon {
+      transform: translateX(156px);
+
+      @include r($breakpoint-4) {
+        width: 100px;
+        transform: translateX(76px);
+      }
+    }
+
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 5000px;
+      right: -10px;
+      height: 100%;
+      background: #3E3E3E;
+    }
+  }
+
+  &__title {
+    transform: translateX(-300px);
+
+    @include r($breakpoint-4) {
+      width: 150px;
+      height: 60px;
+    }
+  }
+
+  &-is-loading {
+    .preloader__house-icon {
+      animation: shine 1.75s linear infinite;
+    }
+  }
+}
+
+@keyframes shine {
+  0% {
+    opacity: .5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: .5;
+  }
+}

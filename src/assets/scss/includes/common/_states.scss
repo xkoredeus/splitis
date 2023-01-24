@@ -1,0 +1,8 @@
+a, a:hover, a:active, a:focus,
+button, input, button:hover, button:active, button:focus,
+input:focus, input:active, .btn, select:focus, select:active {
+  text-decoration: none;
+  outline: none;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}

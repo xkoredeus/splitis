@@ -1,0 +1,247 @@
+<div class="filter-wrapper">
+    <form class="filter">
+        <div class="filter-item">
+            <div class="filter-item__top">
+                <div class="title-h6 font-demibold">Категории</div>
+            </div>
+            <div class="filter-item__content">
+                <label class="filter-item__category">
+                    <input type="checkbox">
+                    <span>Настенные</span>
+                </label>
+                <label class="filter-item__category">
+                    <input type="checkbox">
+                    <span>Инверторные</span>
+                </label>
+                <label class="filter-item__category">
+                    <input type="checkbox">
+                    <span>Напольно-потолочные</span>
+                </label>
+                <label class="filter-item__category">
+                    <input type="checkbox">
+                    <span>Кассетного типа</span>
+                </label>
+                <label class="filter-item__category">
+                    <input type="checkbox">
+                    <span>Канального типа</span>
+                </label>
+                <label class="filter-item__category">
+                    <input type="checkbox">
+                    <span>Колонного типа</span>
+                </label>
+                <label class="filter-item__category">
+                    <input type="checkbox">
+                    <span>Внутренние блоки</span>
+                </label>
+                <label class="filter-item__category">
+                    <input type="checkbox">
+                    <span>Наружные блоки</span>
+                </label>
+            </div>
+        </div>
+        <div class="filter-item filter-item__top--togglable">
+            <div class="filter-item__top active js-toggle-filter">
+                <div class="title-h6 font-demibold">Площадь помещения</div>
+                <svg width="24" height="24">
+                    <use xlink:href="#chevron-bottom"></use>
+                </svg>
+            </div>
+            <div class="filter-item__content">
+
+                {{> range-slider }}
+
+            </div>
+        </div>
+        <div class="filter-item filter-item__top--togglable">
+            <div class="filter-item__top active js-toggle-filter">
+                <div class="title-h6 font-demibold">Бренды</div>
+                <svg width="24" height="24">
+                    <use xlink:href="#chevron-bottom"></use>
+                </svg>
+            </div>
+            <div class="filter-item__content">
+                <input type="text" class="form-input w-100" placeholder="Быстрый поиск">
+                <div class="filter-item__brands">
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        <span class="checkbox__text">
+                        <svg width="24" height="24">
+                            <use xlink:href="#check"></use>
+                        </svg>
+                        <span>Инверторный</span>
+                    </span>
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" checked>
+                        <span class="checkbox__text">
+                        <svg width="24" height="24">
+                            <use xlink:href="#check"></use>
+                        </svg>
+                        <span>Airwell</span>
+                    </span>
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" checked>
+                        <span class="checkbox__text">
+                        <svg width="24" height="24">
+                            <use xlink:href="#check"></use>
+                        </svg>
+                        <span>AUX</span>
+                    </span>
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        <span class="checkbox__text">
+                        <svg width="24" height="24">
+                            <use xlink:href="#check"></use>
+                        </svg>
+                        <span>Axioma</span>
+                    </span>
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        <span class="checkbox__text">
+                        <svg width="24" height="24">
+                            <use xlink:href="#check"></use>
+                        </svg>
+                        <span>Ballu</span>
+                    </span>
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        <span class="checkbox__text">
+                        <svg width="24" height="24">
+                            <use xlink:href="#check"></use>
+                        </svg>
+                        <span>Bosch</span>
+                    </span>
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        <span class="checkbox__text">
+                        <svg width="24" height="24">
+                            <use xlink:href="#check"></use>
+                        </svg>
+                        <span>Cooper&Hunter</span>
+                    </span>
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        <span class="checkbox__text">
+                        <svg width="24" height="24">
+                            <use xlink:href="#check"></use>
+                        </svg>
+                        <span>Инверторный</span>
+                    </span>
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        <span class="checkbox__text">
+                        <svg width="24" height="24">
+                            <use xlink:href="#check"></use>
+                        </svg>
+                        <span>Airwell</span>
+                    </span>
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        <span class="checkbox__text">
+                        <svg width="24" height="24">
+                            <use xlink:href="#check"></use>
+                        </svg>
+                        <span>AUX</span>
+                    </span>
+                    </label>
+                </div>
+                <button type="button" class="link-blue link-blue-svg-fill gap-10 filter-item__brands-button js-toggle-brands-list">
+                    <svg width="24" height="24">
+                        <use xlink:href="#chevron-bottom"></use>
+                    </svg>
+                    <span>Показать все</span>
+                </button>
+            </div>
+        </div>
+        <div class="filter-item filter-item__top--togglable">
+            <div class="filter-item__top active js-toggle-filter">
+                <div class="title-h6 font-demibold">Товары со скидкой</div>
+                <svg width="24" height="24">
+                    <use xlink:href="#chevron-bottom"></use>
+                </svg>
+            </div>
+            <div class="filter-item__content">
+                <label class="radio">
+                    <input type="radio" name="sale" checked>
+                    <span class="radio__text">
+                    <span>Любой</span>
+                </span>
+                </label>
+                <label class="radio">
+                    <input type="radio" name="sale">
+                    <span class="radio__text">
+                    <span>5% и больше</span>
+                </span>
+                </label>
+                <label class="radio">
+                    <input type="radio" name="sale">
+                    <span class="radio__text">
+                    <span>10% и больше</span>
+                </span>
+                </label>
+                <label class="radio">
+                    <input type="radio" name="sale">
+                    <span class="radio__text">
+                    <span>20% и больше</span>
+                </span>
+                </label>
+            </div>
+        </div>
+        <div class="filter-item filter-item__top--togglable">
+            <div class="filter-item__top js-toggle-filter">
+                <div class="title-h6 font-demibold">Уровень шума</div>
+                <svg width="24" height="24">
+                    <use xlink:href="#chevron-bottom"></use>
+                </svg>
+            </div>
+            <div class="filter-item__content">
+                <div>Уровень шума</div>
+            </div>
+        </div>
+        <div class="filter-item filter-item__top--togglable">
+            <div class="filter-item__top js-toggle-filter">
+                <div class="title-h6 font-demibold">Тип блока</div>
+                <svg width="24" height="24">
+                    <use xlink:href="#chevron-bottom"></use>
+                </svg>
+            </div>
+            <div class="filter-item__content">
+                <div>Тип блока</div>
+            </div>
+        </div>
+        <div class="filter-item filter-item__top--togglable">
+            <div class="filter-item__top js-toggle-filter">
+                <div class="title-h6 font-demibold">Мощность обогрева</div>
+                <svg width="24" height="24">
+                    <use xlink:href="#chevron-bottom"></use>
+                </svg>
+            </div>
+            <div class="filter-item__content">
+                <div>Мощность обогрева</div>
+            </div>
+        </div>
+        <div class="filter-item filter-item__top--togglable">
+            <div class="filter-item__top js-toggle-filter">
+                <div class="title-h6 font-demibold">Количеству комнат</div>
+                <svg width="24" height="24">
+                    <use xlink:href="#chevron-bottom"></use>
+                </svg>
+            </div>
+            <div class="filter-item__content">
+                <div>Количеству комнат</div>
+            </div>
+        </div>
+        <div class="d-flex flex-column w-100 gap-15">
+            <button type="submit" class="button button-secondary w-100">Показать <span>(32)</span></button>
+            <button type="reset" class="button button-secondary-outlined w-100">Сбросить</button>
+        </div>
+    </form>
+</div>

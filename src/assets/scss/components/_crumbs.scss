@@ -1,0 +1,42 @@
+.crumbs {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin-bottom: 30px;
+  gap: 5px;
+  row-gap: 8px;
+
+  @include r($breakpoint-2) {
+    margin-bottom: 20px;
+  }
+
+  li {
+    color: $grayText2;
+    @include text2;
+    display: inline-flex;
+    gap: 5px;
+
+    a {
+      color: $grayText2;
+
+      &:hover {
+        color: $red;
+      }
+    }
+
+    svg {
+      fill: $grayText2;
+
+      @include r($breakpoint-3) {
+        margin-top: -3px;
+      }
+
+      @include r($breakpoint-4) {
+        margin-top: 3px;
+        width: 12px;
+        height: 12px;
+      }
+    }
+  }
+}

@@ -1,0 +1,95 @@
+{{> crumbs }}
+
+<section class="section--inner pt-0">
+    <div class="container">
+        <div class="d-flex flex-column justify-content-between gap-10 align-items-start flex-md-row align-items-md-center spacing-1">
+            <div class="title-h2 font-demibold">Избранные товары</div>
+
+            <button class="link link-svg-fill d-flex align-items-center">
+                <span class="font-medium">Очистить список</span>
+                <svg width="24" height="24">
+                    <use xlink:href="#cross"></use>
+                </svg>
+            </button>
+        </div>
+
+        <div class="row spacing-1">
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-3 mb-lg-0">
+
+                {{> item-favorites }}
+
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-3 mb-lg-4">
+
+                {{> item-favorites }}
+
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-3 mb-lg-4">
+
+                {{> item-favorites }}
+
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-3 mb-lg-4">
+
+                {{> item-favorites }}
+
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-3 mb-lg-4">
+
+                {{> item-favorites }}
+
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-3 mb-lg-4">
+
+                {{> item-favorites }}
+
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-3 mb-lg-4">
+
+                {{> item-favorites }}
+
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-3 mb-lg-4">
+
+                {{> item-favorites }}
+
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-center">
+
+            {{> pagination }}
+
+        </div>
+    </div>
+</section>
+
+{{> feed }}
+
+<section class="section--inner">
+    <div class="container">
+        <div class="title-h2 font-demibold spacing-2">Рекомендуемые товары</div>
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-3 mb-lg-0">
+
+                {{> item-access }}
+
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-3 mb-lg-0">
+
+                {{> item-access }}
+
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-3 mb-lg-0">
+
+                {{> item-access }}
+
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-3 mb-lg-0">
+
+                {{> item-access }}
+
+            </div>
+        </div>
+    </div>
+</section>

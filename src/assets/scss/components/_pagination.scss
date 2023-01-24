@@ -1,0 +1,74 @@
+div {
+  &.pagination {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    @include r($breakpoint-2) {
+      gap: 10px;
+    }
+
+    ul {
+      &.pagination {
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        margin-bottom: 0;
+        padding: 0;
+
+        li {
+          &.page-item {
+            color: $grayText2;
+            width: 55px;
+            height: 55px;
+
+            @include r($breakpoint-2) {
+              width: 35px;
+              height: 35px;
+            }
+
+            .page-link {
+              color: $grayText2;
+              width: 100%;
+              height: 100%;
+              @include flex-center;
+              &:hover {
+                color: $red;
+              }
+            }
+
+            &.active {
+              .page-link {
+                background-color: $red;
+                color: $white;
+                border-radius: $radius;
+              }
+            }
+          }
+
+          &:hover.page-link {
+            color: $dark;
+          }
+        }
+      }
+    }
+
+
+    .pagination-dots {
+      color: $grayText2;
+      margin-bottom: 13px;
+
+      @include r($breakpoint-2) {
+        margin-bottom: 8px;
+      }
+    }
+
+    .button {
+      @include r($breakpoint-2) {
+        padding: 9px 15px;
+      }
+    }
+  }
+
+}

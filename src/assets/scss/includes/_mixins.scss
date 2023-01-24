@@ -1,0 +1,86 @@
+@mixin ct {
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@mixin cv {
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@mixin ovl {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+@mixin scroll-min {
+  &::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: $tr;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    width: 10px;
+    height: 10px;
+    background: $red;
+    border-radius: $radius2;
+  }
+}
+
+@mixin scroll {
+  &::-webkit-scrollbar {
+    width: 15px;
+    height: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: $grayBg;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    width: 10px;
+    height: 10px;
+    background: $red;
+    border-radius: $radius2;
+  }
+}
+
+@mixin ease {
+  transition: .3s all ease;
+}
+
+@mixin ease-long {
+  transition: .6s all ease;
+}
+
+@mixin r($width) {
+  @media only screen and (max-width: $width + "px") {
+    @content
+  }
+}
+@mixin rmin($width) {
+  @media only screen and (min-width: $width + "px") {
+    @content
+  }
+}

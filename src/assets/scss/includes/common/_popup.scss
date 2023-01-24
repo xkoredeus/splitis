@@ -1,0 +1,123 @@
+.popup__wrapper {
+  padding: 30px;
+  box-shadow: 0 4px 40px rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
+  max-width: 545px;
+  width: 100%;
+
+  @include r($breakpoint-4) {
+    padding: 25px 15px;
+    border-radius: $radius;
+  }
+
+  &--xl {
+    max-width: 802px;
+  }
+
+  &--lg {
+    max-width: 570px;
+  }
+
+  &--sm {
+    max-width: 490px;
+  }
+
+  &--xs {
+    max-width: 423px;
+  }
+
+  .fancybox-close-small {
+    top: 20px;
+    right: 20px;
+
+    @include r($breakpoint-4) {
+      top: 8px;
+      right: 8px;
+    }
+  }
+}
+
+.popup-hide-close-button {
+  .fancybox-close-small {
+    display: none;
+  }
+}
+
+.popup-title__wrapper {
+  padding-right: 30px;
+}
+
+.popup-check__wrapper {
+  width: 80px;
+  height: 80px;
+  background-color: $green;
+  border-radius: 50%;
+  @include flex-center;
+
+  @include r($breakpoint-3) {
+    width: 50px;
+    height: 50px;
+
+    svg {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+
+.popup-card {
+  display: grid;
+  grid-template-columns: 70px auto;
+  align-items: center;
+  gap: 20px;
+
+  @include r($breakpoint-3) {
+    gap: 15px;
+    grid-template-columns: 50px auto;
+  }
+
+  &__picture {
+    max-width: 70px;
+    max-height: 70px;
+    border-radius: $radius3;
+    overflow: hidden;
+
+    @include r($breakpoint-3) {
+      max-width: 50px;
+      max-height: 50px;
+      border-radius: $radius;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+}
+
+.popup-change-location {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-height: 250px;
+    gap: 15px;
+
+    @include r($breakpoint-2) {
+      gap: 5px;
+      max-height: 170px;
+    }
+
+    @include r($breakpoint-4) {
+      max-height: 260px;
+    }
+  }
+
+  @include r($breakpoint-4) {
+    .popup-change-location__link {
+      font-size: 11px;
+    }
+  }
+}

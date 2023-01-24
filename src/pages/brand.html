@@ -1,0 +1,121 @@
+{{> crumbs }}
+
+<div class="container">
+    <div class="inner-title-with-result spacing-1">
+        <span class="title-h2 font-demibold">
+            Electrolux
+        </span>
+        <span class="inner-title-with-result__number color-gray2 ">189</span>
+    </div>
+</div>
+<section class="section--inner pt-0">
+    <div class="container">
+        <div class="brand-info__wrapper">
+            <p class="mb-0 lh14">Electrolux — всемирно известный шведский бренд, продукция которого ежегодно поставляется в 150 различных стран. Головной офис находится в Стокгольме, где компания и была основана в 1910 году. А уже спустя 10 лет она превратилась в глобальную сеть с представительствами и заводами по всему миру.</p>
+
+            <div class="brand-info">
+                <div class="brand-info__picture">
+                    <img src="{{root}}assets/img/brands/brand-13.jpg" alt="Electrolux">
+                </div>
+                <div class="brand-info__table">
+                    <div class="brand-info__row">
+                        <div class="color-gray3">Страна</div>
+                        <div>Швеция</div>
+                    </div>
+                    <div class="brand-info__row">
+                        <div class="color-gray3">Гарантия</div>
+                        <div>12 мес</div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+{{> shared-categories }}
+
+<section class="section--inner pt-0 pb-0">
+    <div class="container">
+
+        {{> shared-selections }}
+
+    </div>
+</section>
+
+<section class="section--inner">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+                <button class="filter-toggle__button button button-secondary w-xs-100 js-toggle-filter-modal">
+                    Показать фильты
+                </button>
+                {{> filter }}
+
+                <div id="filter" style="display: none" class="filter-popup"></div>
+            </div>
+            <div class="col-lg-9">
+
+                {{> catalog }}
+
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section--inner">
+    <div class="container">
+        <div class="font-demibold title-h3 spacing-1">Популярные бренды</div>
+
+        {{> brands-slider }}
+
+    </div>
+</section>
+<section class="section--inner">
+    <div class="container">
+        <div class="font-demibold title-h3 spacing-1">Популярные подборки</div>
+
+        {{> shared-selections }}
+
+    </div>
+</section>
+
+{{> shared-splits-by-type }}
+
+<section class="section--inner pb-0 ovh">
+    <div class="container">
+        <div class="font-demibold title-h3 spacing-1">Вы недавно смотрели</div>
+
+        {{> shared-popular-slider }}
+
+    </div>
+</section>
+<section class="section--inner pb-0 ovh">
+    <div class="container">
+        <div class="font-demibold title-h3 spacing-1">Хиты продаж</div>
+
+        {{> shared-best-slider }}
+
+    </div>
+</section>
+
+<section class="section--inner">
+    <div class="container">
+        <div class="get-order section-bg-gray">
+            <div class="font-demibold title-h3 spacing-1">Как сделать заказ у нас на сайте?</div>
+
+            {{> get-order}}
+
+        </div>
+    </div>
+</section>
+
+{{> shared-last-reviews }}
+
+{{> feed }}
+
+{{> where }}
+
+{{> office }}
+
+{{> seo }}

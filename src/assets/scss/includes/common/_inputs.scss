@@ -1,0 +1,497 @@
+input,
+textarea,
+select {
+  @include ease-long;
+  border: none;
+}
+option {
+  color: $dark;
+}
+textarea {
+  resize: none !important;
+  overflow: hidden;
+
+  &::placeholder {
+    color: $dark;
+  }
+}
+
+label {
+  margin-bottom: 0;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="tel"]::placeholder {
+  color: $dark;
+}
+input:focus,
+textarea:focus,
+input:active,
+textarea:active {
+  color: $dark;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.form-input {
+  padding: 14px 20px;
+  border: 1px solid $grayBorder1;
+  border-radius: $radius;
+
+  &::placeholder {
+    color: $grayText1 !important;
+  }
+}
+
+.form-field {
+  position: relative;
+  padding: 10px 20px 14px;
+  border-radius: $radius;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  border: 1px solid $grayBorder1;
+  background-color: $white;
+
+  @include r($breakpoint-2) {
+    padding: 8px 15px 12px;
+  }
+
+  &--bg {
+    border: none;
+    background-color: $grayBg;
+
+    input {
+      background: $tr;
+    }
+
+    &.form-field--select .select2-container--default .select2-selection--single {
+      background-color: $grayBg;
+      border-color: $tr;
+    }
+  }
+
+  &-no-border {
+    border: none !important;
+  }
+
+  &__label {
+    @include text3;
+    color: $grayText2
+  }
+
+  &__rating {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 3px;
+
+    input {
+      position: absolute;
+      opacity: 0;
+      z-index: -1;
+
+      &:checked {
+        ~ label svg {
+          fill: #F5CB5E
+        }
+      }
+    }
+
+    label {
+      cursor: pointer;
+
+      &:hover,
+      &:focus {
+        ~ label svg {
+          fill: #F5CB5E;
+        }
+      }
+
+      svg {
+        fill: $grayBorder1;
+        @include ease;
+      }
+    }
+
+    @include r($breakpoint-3) {
+      svg {
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+
+
+  &-textarea {
+    padding-top: 12px;
+
+    textarea {
+      background: $tr;
+      box-shadow: none;
+      outline: none;
+      border: none;
+      width: 100%;
+    }
+  }
+
+  &-date {
+    input {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      background-color: $tr;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+    }
+    input[type="date"]::-webkit-inner-spin-button,
+    input[type="date"]::-webkit-calendar-picker-indicator {
+      -webkit-appearance: none;
+      //visibility: hidden !important;
+      opacity: 0 !important;
+    }
+
+    svg {
+      position: absolute;
+      fill: $grayText2;
+      right: 19px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+
+.form-field--select {
+  position: relative;
+  padding: 0;
+  border: none;
+
+  .form-field__label {
+    position: absolute;
+    z-index: 1;
+    left: 20px;
+    top: 10px;
+
+    @include r($breakpoint-2) {
+      left: 13px;
+    }
+  }
+
+  .select2-container--default {
+    .select2-selection--single {
+      min-height: 72px;
+
+      @include r($breakpoint-2) {
+        min-height: 60px;
+      }
+    }
+    .select2-selection__rendered {
+      padding-top: 29px !important;
+      padding-bottom: 13px !important;
+
+      @include r($breakpoint-2) {
+        line-height: 20px;
+      }
+    }
+  }
+}
+
+.form-field--range {
+  position: relative;
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 12px 1fr;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+  }
+
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 3px;
+
+    &:last-child {
+      justify-content: flex-end;
+    }
+  }
+
+  &__input {
+    position: relative;
+
+    input {
+      position: absolute;
+      padding: 0;
+      background-color: $tr;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+    }
+    .input-text {
+      display: inline-block;
+      visibility: hidden;
+      white-space: pre;
+      min-width: 10px;
+    }
+  }
+
+  &__divider {
+    width: 12px;
+    height: 2px;
+    background-color: $grayText1;
+  }
+
+  .mdc-slider {
+    position: absolute;
+    width: calc(100% - 44px);
+    bottom: -4px;
+    margin: 0;
+    height: 8px;
+    left: 21px;
+
+    .mdc-slider__track {
+      height: 3px;
+    }
+
+    .mdc-slider__track--active {
+      top: 1px;
+      height: 3px;
+    }
+    .mdc-slider__track--active_fill {
+      border-color: $red;
+    }
+
+    .mdc-slider__thumb {
+      height: 20px;
+      width: 20px;
+      left: -12px;
+      top: -5px;
+
+      &-knob {
+        background-color: $red;
+        border-color: $red;
+        border-width: 5px;
+        height: 10px;
+        width: 10px;
+      }
+
+      &::before,
+      &::after {
+        background-color: $red;
+      }
+    }
+
+    .mdc-slider__track--inactive {
+      background-color: #F82A56;
+    }
+    .mdc-slider__value-indicator-container {
+      display: none;
+    }
+  }
+}
+.file-input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.file {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  &__name {
+    display: inline-block;
+    max-width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+/* select2 */
+.fancybox-active .select2-container--open .select2-dropdown {
+  z-index: 100100;
+  background-color: $grayBg;
+  border-color: $tr !important;
+}
+
+.select2-dropdown {
+  border: 1px solid $grayBorder1 !important;
+  background-color: #fff;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+}
+.select2-container--open {
+  .select2-selection__arrow {
+    transform: scaleY(-1)
+  }
+  .select2-dropdown--below {
+    border: none;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+  }
+}
+.select2-container--default {
+  .select2-selection--single {
+    outline: none;
+    min-height: 54px;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    border-color: $grayBorder1;
+    @include ease-long;
+
+    .select2-selection__rendered {
+      color: $dark;
+      margin-right: 62px;
+      padding: 12px 0 14px 20px;
+
+      @include r($breakpoint-2) {
+        padding: 8px 0 10px 12px;
+        margin-right: 54px;
+      }
+    }
+    .select2-selection__arrow {
+      background-image: url('../img/icon-arrow--select.svg');
+      @include ease-long;
+      background-position: 50%;
+      background-size: 13px;
+      background-repeat: no-repeat;
+      top: 50%;
+      right: 20px;
+      margin-top: -13px;
+
+      @include r($breakpoint-2) {
+        right: 12px;
+      }
+
+      b {
+        display: none;
+      }
+    }
+  }
+  &.select2-container--open .select2-selection__arrow {
+    background-image: url('../img/icon-arrow--select-red.svg');
+  }
+  .select2-results__option {
+    @include ease-long;
+    padding: 0 11px 11px 20px;
+
+    @include r($breakpoint-2) {
+      padding: 0 8px 11px 12px;
+    }
+  }
+  .select2-results__option--highlighted[aria-selected] {
+    color: $red;
+    background-color: $white;
+  }
+  .select2-results__option[aria-selected=true] {
+    color: $grayText1;
+    background-color: $white;
+
+    // todo
+    display: none;
+  }
+  .select2-results>.select2-results__options {
+    margin-right: 4px;
+    margin-bottom: 5px;
+    &::-webkit-scrollbar {
+      width: 3px;
+
+      &-track {
+        background-color: $tr;
+        //box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+        //border-radius: 50px;
+      }
+      &-thumb {
+        background-color: $red;
+        border-radius: 50px;
+      }
+    }
+  }
+
+  &.select2-container--open .select2-dropdown--above {
+    border-bottom-color: transparent !important;
+    bottom: -6px;
+  }
+
+  &.select2-container--open.select2-container--above {
+    .select2-selection--single {
+      border-top-color: transparent !important;
+    }
+  }
+
+  &.select2-container--open .select2-dropdown--below {
+    border-top-color: transparent !important;
+    top: -6px;
+  }
+
+  &.select2-container--open.select2-container--below {
+    .select2-selection--single {
+      border-bottom-color: transparent !important;
+    }
+  }
+}
+
+.form-number {
+  width: 161px;
+  height: 68px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  border-radius: $radius;
+  border: 1px solid $grayBorder1;
+
+  @include r($breakpoint-2) {
+    width: 120px;
+    height: 50px;
+  }
+
+  @include r($breakpoint-35) {
+    width: 100px;
+    height: 40px;
+  }
+
+  input {
+    width: 50px;
+    cursor: pointer;
+    text-align: center;
+
+    @include r($breakpoint-35) {
+      width: 40px;
+    }
+  }
+
+  &__button {
+    svg {
+      fill: $grayText1;
+      @include ease;
+
+      @include r($breakpoint-35) {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    &:hover {
+      svg {
+        fill: $blue;
+      }
+    }
+  }
+}
