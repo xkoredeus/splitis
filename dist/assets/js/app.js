@@ -27588,12 +27588,6 @@ function initSlider () {
 }
 
 $(() => {
-    if ($('.js-range-slider').parents('html').length > 0) {
-        initSlider();
-    };
-});
-
-$(() => {
     $('.form-number').on('click', '.js-form-number-minus, .js-form-number-plus', function quantityClick() {
         const input = $( this ).siblings( '.form-number__input' );
         if ( (input.val() > +input.attr('min')) && ($( this ).hasClass( 'js-form-number-minus' ) ) ) {
@@ -27772,7 +27766,9 @@ $(() => {
     $(window).bind('resize', function () {
         var nw = $(window).width();
         if (oldWidth !== nw) {
-            initSlider();
+            if ($('.js-range-slider').parents('html').length > 0) {
+                initSlider();
+            };
             initFilters();
         }
         oldWidth = nw;

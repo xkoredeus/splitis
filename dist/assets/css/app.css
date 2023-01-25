@@ -25880,6 +25880,10 @@ button {
   max-width: 423px;
 }
 
+.popup__wrapper--search {
+  height: 100%;
+}
+
 .popup__wrapper .fancybox-close-small {
   top: 20px;
   right: 20px;
