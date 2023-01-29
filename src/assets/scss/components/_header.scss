@@ -1236,6 +1236,14 @@
   }
 }
 
+.header-search {
+
+  @include rmin($breakpoint-3) {
+    flex-grow: 1;
+  }
+
+}
+
 
 .header {
   & > .container {
