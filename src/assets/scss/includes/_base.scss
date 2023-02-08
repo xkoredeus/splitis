@@ -79,9 +79,12 @@ sup {
 
   li {
     position: relative;
-    margin-bottom: 20px;
     list-style-type: none;
     padding-left: 36px;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
 
     @include r($breakpoint-35) {
       padding-left: 32px;

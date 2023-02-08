@@ -27562,6 +27562,7 @@ $(() => {
 
 function initSlider () {
     if ($('.js-range-slider.mdc-slider').parents('html').length > 0) {
+        console.log('init');
         const rangeSlider = new mdc.slider.MDCSlider(document.querySelector('.js-range-slider.mdc-slider'));
         rangeSlider.root.addEventListener('MDCSlider:change', (e) => {
             if (e.detail.thumb === 1) {
@@ -27753,7 +27754,7 @@ $(() => {
     });
 
     function initFilters() {
-        if ($(window).width() + 15 < 1260) {
+        if ($(window).width() + 15 < 1290) {
             $('.filter').appendTo('#filter');
         } else {
             $('.filter').appendTo('.filter-wrapper');
@@ -27774,7 +27775,13 @@ $(() => {
         oldWidth = nw;
     });
 
+    initSlider();
+
 });
+
+$(() => {
+    $('.favorites-list').find('.item-favorites__actions-fav').addClass('active');
+})
 
 
 $(() => {
@@ -27790,12 +27797,39 @@ $(() => {
 $(() => {
     $('.js-item-card-toggle').on('click', function (e) {
         e.preventDefault();
+
+        if ($(this).hasClass('item-favorites__actions-button')) {
+            $(this).parents('.item-actions__button-wrapper').toggleClass('active');
+        }
         $(this).toggleClass('active');
     });
+
+
     $('.js-item-togglable-card-toggle').on('click', function (e) {
         e.preventDefault();
         $(this).toggleClass('active');
     });
+});
+
+
+
+$(() => {
+    $('.compare-grid__wrapper')
+        .find('.item-favorites__actions-stat')
+        .addClass('active');
+    $('.compare-grid__wrapper')
+        .find('.item-actions-compare__button-wrapper')
+        .addClass('active');
+
+    $('.favorites-list')
+        .find('.item-favorites')
+        .find('.item-actions-favorites__button-wrapper')
+        .addClass('active');
+
+    $('.favorites-list')
+        .find('.item-favorites')
+        .find('.item-favorites__actions-fav')
+        .addClass('active');
 });
 
 $(() => {
@@ -27870,7 +27904,7 @@ $(() => {
                 slidesPerView: 3,
 
             },
-            1260: {
+            1290: {
                 slidesPerView: 4,
                 navigation: {
                     nextEl: ".js-home-best-slider-next",
@@ -27912,7 +27946,7 @@ $(() => {
                 slidesPerView: 3,
 
             },
-            1260: {
+            1290: {
                 slidesPerView: 4,
                 navigation: {
                     nextEl: ".js-gratitude-slider-next",
@@ -27953,7 +27987,7 @@ $(() => {
                     clickable: true,
                 },
             },
-            1260: {
+            1290: {
                 slidesPerView: 6,
                 navigation: {
                     nextEl: ".js-brands-slider-next",
@@ -27996,7 +28030,7 @@ $(() => {
                 slidesPerView: 3,
 
             },
-            1260: {
+            1290: {
                 slidesPerView: 4,
                 navigation: {
                     nextEl: ".js-popular-slider-next",
@@ -28030,10 +28064,11 @@ $(() => {
             976: {
                 slidesPerView: 3,
             },
-            1260: {
+            1290: {
                 slidesPerView: 3,
             },
             1560: {
+                slidesPerView: 3,
             },
         },
     });
@@ -28056,7 +28091,7 @@ $(() => {
                     clickable: true,
                 },
             },
-            1260: {
+            1290: {
                 slidesPerView: 3,
                 navigation: {
                     nextEl: ".js-last-reviews-slider-next",
@@ -28091,7 +28126,7 @@ $(() => {
                     clickable: true,
                 },
             },
-            1260: {
+            1290: {
                 slidesPerView: 3,
                 navigation: {
                     nextEl: ".js-reviews-slider-next",
@@ -28135,7 +28170,7 @@ $(() => {
                     clickable: true,
                 },
             },
-            1260: {
+            1290: {
                 slidesPerView: 3,
                 navigation: {
                     nextEl: ".js-gallery-slider-next",
@@ -28183,7 +28218,7 @@ $(() => {
                     clickable: true,
                 },
             },
-            1260: {
+            1290: {
                 slidesPerView: 6,
                 navigation: {
                     nextEl: ".js-home-certs-slider-next",
@@ -28223,7 +28258,7 @@ $(() => {
                     clickable: true,
                 },
             },
-            1260: {
+            1290: {
                 navigation: {
                     nextEl: ".js-category-brands-slider-next",
                     prevEl: ".js-category-brands-slider-prev",

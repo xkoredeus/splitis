@@ -728,9 +728,9 @@
   width: 270px;
   z-index: 1;
 
-  @include rmin($breakpoint-3) {
-    transition: .1s all ease;
-  }
+  //@include rmin($breakpoint-3) {
+  //  transition: .1s all ease;
+  //}
 
 
   @include r($breakpoint-2) {
@@ -854,9 +854,9 @@
   opacity: 0;
   visibility: hidden;
 
-  @include rmin($breakpoint-3) {
-    transition: .1s all ease;
-  }
+  //@include rmin($breakpoint-3) {
+  //  transition: .1s all ease;
+  //}
 
   @include r($breakpoint-2) {
     padding-top: 20px;

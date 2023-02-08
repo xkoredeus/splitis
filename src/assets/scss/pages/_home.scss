@@ -1386,11 +1386,21 @@
   flex-direction: column;
   align-items: flex-start;
   flex-wrap: wrap;
-  max-height: 340px;
+  max-height: 420px;
   gap: 15px;
 
+  .link-dark {
+    width: calc(100% / 6);
+    display: inline-block;
+  }
+
   @include r($breakpoint-2) {
+    max-height: 360px;
     gap: 5px;
+
+    .link-dark {
+      width: auto;
+    }
   }
 
   @include r($breakpoint-3) {

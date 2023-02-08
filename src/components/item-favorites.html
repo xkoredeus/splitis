@@ -60,16 +60,31 @@
             <a href="#" class="button button-tertiary">Купить</a>
 
             <div class="item-favorites__actions">
-                <button class="item-favorites__actions-button item-favorites__actions-stat js-item-card-toggle">
-                    <svg width="24" height="24">
-                        <use xlink:href="#stat"></use>
-                    </svg>
-                </button>
-                <button class="item-favorites__actions-button item-favorites__actions-fav js-item-card-toggle">
-                    <svg width="24" height="24">
-                        <use xlink:href="#heart"></use>
-                    </svg>
-                </button>
+                <div class="item-actions__button-wrapper item-actions-compare__button-wrapper">
+                    <button class="item-favorites__actions-button item-favorites__actions-stat js-item-card-toggle">
+                        <svg width="24" height="24">
+                            <use xlink:href="#stat"></use>
+                        </svg>
+                    </button>
+                    <div class="item-actions__button-label">
+                        <div class="item-actions__button-label-in">
+                            <span>Убрать из сравнения</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item-actions__button-wrapper item-actions-favorites__button-wrapper">
+                    <button class="item-actions__button item-favorites__actions-button item-favorites__actions-fav js-item-card-toggle">
+                        <svg width="24" height="24">
+                            <use xlink:href="#heart"></use>
+                        </svg>
+                    </button>
+                    <div class="item-actions__button-label">
+                        <div class="item-actions__button-label-in">
+                            <span>Удалить из избранного</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 

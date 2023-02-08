@@ -2587,3 +2587,138 @@
   filter: drop-shadow(0px 155px 62px rgba(0, 0, 0, 0.01)) drop-shadow(0px 87px 52px rgba(0, 0, 0, 0.05)) drop-shadow(0px 39px 39px rgba(0, 0, 0, 0.09)) drop-shadow(0px 10px 21px rgba(0, 0, 0, 0.1)) drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.1));
   border-radius: 25px;
 }
+.row-gap-20 {
+  row-gap: 20px;
+}
+
+.review-sticky {
+  border-radius: 10px;
+
+  @include rmin($breakpoint-2) {
+    padding-bottom: 0 !important;
+  }
+
+  &__wrapper {
+    position: sticky;
+    top: 10px;
+
+    @include r($breakpoint-2) {
+      position: static;
+    }
+  }
+
+  
+  &__total {
+    display: inline-grid;
+    grid-template-columns: 40px 1fr;
+    justify-content: flex-start;
+    background-color: $white;
+    border-radius: 5px;
+    overflow: hidden;
+    align-items: center;
+    @include text2;
+
+    &-number {
+      @include flex-center;
+      text-align: center;
+      border-radius: 5px;
+      padding: 5px 10px;
+
+
+      background-color: #19BF3E;
+      color: $white;
+    }
+
+    & > div:last-child {
+      padding: 3px 10px;
+    }
+  }
+
+  .button {
+    display: grid;
+
+    @include rmin($breakpoint-2) {
+      position: relative;
+      width: calc(100% + 60px);
+      left: -30px;
+    }
+  }
+}
+
+
+.item-actions__button-wrapper {
+  position: relative;
+
+  &.active {
+    .item-favorites__actions-button:hover ~ .item-actions__button-label {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  .item-actions__button-label {
+    position: absolute;
+    left: 50%;
+    bottom: 100%;
+    transform: translateX(-50%);
+    text-align: center;
+    white-space: nowrap;
+    padding-bottom: 10px;
+    z-index: 12;
+    opacity: 0;
+    visibility: hidden;
+
+    @include r(1400) {
+      left: auto;
+      transform: translate(0);
+      right: -10px;
+    }
+
+
+
+    &-in {
+      position: relative;
+      padding: 10px 15px;
+
+      @include r(1400) {
+        font-size: 16px;
+      }
+
+      @include r($breakpoint-2) {
+        padding: 5px;
+        font-size: 12px;
+      }
+
+      &::before {
+        @include ovl;
+        background-color: $white;
+        box-shadow: 0 4px 40px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+      }
+
+      &::after {
+        position: absolute;
+        content: '';
+        width: 20px;
+        height: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -10px;
+        border-top: solid 10px $white;
+        border-left: solid 10px transparent;
+        border-right: solid 10px transparent;
+
+        @include r(1400) {
+          left: auto;
+          transform: translate(0);
+          right: 20px;
+        }
+      }
+
+      span {
+        position: relative;
+        z-index: 1;
+      }
+    }
+  }
+}

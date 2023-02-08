@@ -817,7 +817,7 @@
                     </li>
                 </ul>
             </div>
-            <section class="section--inner pt-0">
+            <section class="section--inner pt-0 ovh">
                 <div class="container">
                     <div class="d-flex flex-column justify-content-between gap-10 align-items-start flex-md-row align-items-md-center spacing-1">
                         <div class="title-h2 font-demibold">Избранные товары</div>
@@ -830,7 +830,7 @@
                         </button>
                     </div>
             
-                    <div class="row spacing-1">
+                    <div class="row spacing-1 favorites-list">
                         <div class="col-lg-3 col-md-4 col-sm-6 mb-3 mb-lg-0">
             
                             <div class="item-favorites">
@@ -895,16 +895,31 @@
                                         <a href="#" class="button button-tertiary">Купить</a>
                             
                                         <div class="item-favorites__actions">
-                                            <button class="item-favorites__actions-button item-favorites__actions-stat js-item-card-toggle">
-                                                <svg width="24" height="24">
-                                                    <use xlink:href="#stat"></use>
-                                                </svg>
-                                            </button>
-                                            <button class="item-favorites__actions-button item-favorites__actions-fav js-item-card-toggle">
-                                                <svg width="24" height="24">
-                                                    <use xlink:href="#heart"></use>
-                                                </svg>
-                                            </button>
+                                            <div class="item-actions__button-wrapper item-actions-compare__button-wrapper">
+                                                <button class="item-favorites__actions-button item-favorites__actions-stat js-item-card-toggle">
+                                                    <svg width="24" height="24">
+                                                        <use xlink:href="#stat"></use>
+                                                    </svg>
+                                                </button>
+                                                <div class="item-actions__button-label">
+                                                    <div class="item-actions__button-label-in">
+                                                        <span>Убрать из сравнения</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                            
+                                            <div class="item-actions__button-wrapper item-actions-favorites__button-wrapper">
+                                                <button class="item-actions__button item-favorites__actions-button item-favorites__actions-fav js-item-card-toggle">
+                                                    <svg width="24" height="24">
+                                                        <use xlink:href="#heart"></use>
+                                                    </svg>
+                                                </button>
+                                                <div class="item-actions__button-label">
+                                                    <div class="item-actions__button-label-in">
+                                                        <span>Удалить из избранного</span>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                             
@@ -975,16 +990,31 @@
                                         <a href="#" class="button button-tertiary">Купить</a>
                             
                                         <div class="item-favorites__actions">
-                                            <button class="item-favorites__actions-button item-favorites__actions-stat js-item-card-toggle">
-                                                <svg width="24" height="24">
-                                                    <use xlink:href="#stat"></use>
-                                                </svg>
-                                            </button>
-                                            <button class="item-favorites__actions-button item-favorites__actions-fav js-item-card-toggle">
-                                                <svg width="24" height="24">
-                                                    <use xlink:href="#heart"></use>
-                                                </svg>
-                                            </button>
+                                            <div class="item-actions__button-wrapper item-actions-compare__button-wrapper">
+                                                <button class="item-favorites__actions-button item-favorites__actions-stat js-item-card-toggle">
+                                                    <svg width="24" height="24">
+                                                        <use xlink:href="#stat"></use>
+                                                    </svg>
+                                                </button>
+                                                <div class="item-actions__button-label">
+                                                    <div class="item-actions__button-label-in">
+                                                        <span>Убрать из сравнения</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                            
+                                            <div class="item-actions__button-wrapper item-actions-favorites__button-wrapper">
+                                                <button class="item-actions__button item-favorites__actions-button item-favorites__actions-fav js-item-card-toggle">
+                                                    <svg width="24" height="24">
+                                                        <use xlink:href="#heart"></use>
+                                                    </svg>
+                                                </button>
+                                                <div class="item-actions__button-label">
+                                                    <div class="item-actions__button-label-in">
+                                                        <span>Удалить из избранного</span>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                             
@@ -1055,16 +1085,31 @@
                                         <a href="#" class="button button-tertiary">Купить</a>
                             
                                         <div class="item-favorites__actions">
-                                            <button class="item-favorites__actions-button item-favorites__actions-stat js-item-card-toggle">
-                                                <svg width="24" height="24">
-                                                    <use xlink:href="#stat"></use>
-                                                </svg>
-                                            </button>
-                                            <button class="item-favorites__actions-button item-favorites__actions-fav js-item-card-toggle">
-                                                <svg width="24" height="24">
-                                                    <use xlink:href="#heart"></use>
-                                                </svg>
-                                            </button>
+                                            <div class="item-actions__button-wrapper item-actions-compare__button-wrapper">
+                                                <button class="item-favorites__actions-button item-favorites__actions-stat js-item-card-toggle">
+                                                    <svg width="24" height="24">
+                                                        <use xlink:href="#stat"></use>
+                                                    </svg>
+                                                </button>
+                                                <div class="item-actions__button-label">
+                                                    <div class="item-actions__button-label-in">
+                                                        <span>Убрать из сравнения</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                            
+                                            <div class="item-actions__button-wrapper item-actions-favorites__button-wrapper">
+                                                <button class="item-actions__button item-favorites__actions-button item-favorites__actions-fav js-item-card-toggle">
+                                                    <svg width="24" height="24">
+                                                        <use xlink:href="#heart"></use>
+                                                    </svg>
+                                                </button>
+                                                <div class="item-actions__button-label">
+                                                    <div class="item-actions__button-label-in">
+                                                        <span>Удалить из избранного</span>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                             
@@ -1135,16 +1180,31 @@
                                         <a href="#" class="button button-tertiary">Купить</a>
                             
                                         <div class="item-favorites__actions">
-                                            <button class="item-favorites__actions-button item-favorites__actions-stat js-item-card-toggle">
-                                                <svg width="24" height="24">
-                                                    <use xlink:href="#stat"></use>
-                                                </svg>
-                                            </button>
-                                            <button class="item-favorites__actions-button item-favorites__actions-fav js-item-card-toggle">
-                                                <svg width="24" height="24">
-                                                    <use xlink:href="#heart"></use>
-                                                </svg>
-                                            </button>
+                                            <div class="item-actions__button-wrapper item-actions-compare__button-wrapper">
+                                                <button class="item-favorites__actions-button item-favorites__actions-stat js-item-card-toggle">
+                                                    <svg width="24" height="24">
+                                                        <use xlink:href="#stat"></use>
+                                                    </svg>
+                                                </button>
+                                                <div class="item-actions__button-label">
+                                                    <div class="item-actions__button-label-in">
+                                                        <span>Убрать из сравнения</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                            
+                                            <div class="item-actions__button-wrapper item-actions-favorites__button-wrapper">
+                                                <button class="item-actions__button item-favorites__actions-button item-favorites__actions-fav js-item-card-toggle">
+                                                    <svg width="24" height="24">
+                                                        <use xlink:href="#heart"></use>
+                                                    </svg>
+                                                </button>
+                                                <div class="item-actions__button-label">
+                                                    <div class="item-actions__button-label-in">
+                                                        <span>Удалить из избранного</span>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                             
@@ -1215,16 +1275,31 @@
                                         <a href="#" class="button button-tertiary">Купить</a>
                             
                                         <div class="item-favorites__actions">
-                                            <button class="item-favorites__actions-button item-favorites__actions-stat js-item-card-toggle">
-                                                <svg width="24" height="24">
-                                                    <use xlink:href="#stat"></use>
-                                                </svg>
-                                            </button>
-                                            <button class="item-favorites__actions-button item-favorites__actions-fav js-item-card-toggle">
-                                                <svg width="24" height="24">
-                                                    <use xlink:href="#heart"></use>
-                                                </svg>
-                                            </button>
+                                            <div class="item-actions__button-wrapper item-actions-compare__button-wrapper">
+                                                <button class="item-favorites__actions-button item-favorites__actions-stat js-item-card-toggle">
+                                                    <svg width="24" height="24">
+                                                        <use xlink:href="#stat"></use>
+                                                    </svg>
+                                                </button>
+                                                <div class="item-actions__button-label">
+                                                    <div class="item-actions__button-label-in">
+                                                        <span>Убрать из сравнения</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                            
+                                            <div class="item-actions__button-wrapper item-actions-favorites__button-wrapper">
+                                                <button class="item-actions__button item-favorites__actions-button item-favorites__actions-fav js-item-card-toggle">
+                                                    <svg width="24" height="24">
+                                                        <use xlink:href="#heart"></use>
+                                                    </svg>
+                                                </button>
+                                                <div class="item-actions__button-label">
+                                                    <div class="item-actions__button-label-in">
+                                                        <span>Удалить из избранного</span>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                             
@@ -1295,16 +1370,31 @@
                                         <a href="#" class="button button-tertiary">Купить</a>
                             
                                         <div class="item-favorites__actions">
-                                            <button class="item-favorites__actions-button item-favorites__actions-stat js-item-card-toggle">
-                                                <svg width="24" height="24">
-                                                    <use xlink:href="#stat"></use>
-                                                </svg>
-                                            </button>
-                                            <button class="item-favorites__actions-button item-favorites__actions-fav js-item-card-toggle">
-                                                <svg width="24" height="24">
-                                                    <use xlink:href="#heart"></use>
-                                                </svg>
-                                            </button>
+                                            <div class="item-actions__button-wrapper item-actions-compare__button-wrapper">
+                                                <button class="item-favorites__actions-button item-favorites__actions-stat js-item-card-toggle">
+                                                    <svg width="24" height="24">
+                                                        <use xlink:href="#stat"></use>
+                                                    </svg>
+                                                </button>
+                                                <div class="item-actions__button-label">
+                                                    <div class="item-actions__button-label-in">
+                                                        <span>Убрать из сравнения</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                            
+                                            <div class="item-actions__button-wrapper item-actions-favorites__button-wrapper">
+                                                <button class="item-actions__button item-favorites__actions-button item-favorites__actions-fav js-item-card-toggle">
+                                                    <svg width="24" height="24">
+                                                        <use xlink:href="#heart"></use>
+                                                    </svg>
+                                                </button>
+                                                <div class="item-actions__button-label">
+                                                    <div class="item-actions__button-label-in">
+                                                        <span>Удалить из избранного</span>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                             
@@ -1375,16 +1465,31 @@
                                         <a href="#" class="button button-tertiary">Купить</a>
                             
                                         <div class="item-favorites__actions">
-                                            <button class="item-favorites__actions-button item-favorites__actions-stat js-item-card-toggle">
-                                                <svg width="24" height="24">
-                                                    <use xlink:href="#stat"></use>
-                                                </svg>
-                                            </button>
-                                            <button class="item-favorites__actions-button item-favorites__actions-fav js-item-card-toggle">
-                                                <svg width="24" height="24">
-                                                    <use xlink:href="#heart"></use>
-                                                </svg>
-                                            </button>
+                                            <div class="item-actions__button-wrapper item-actions-compare__button-wrapper">
+                                                <button class="item-favorites__actions-button item-favorites__actions-stat js-item-card-toggle">
+                                                    <svg width="24" height="24">
+                                                        <use xlink:href="#stat"></use>
+                                                    </svg>
+                                                </button>
+                                                <div class="item-actions__button-label">
+                                                    <div class="item-actions__button-label-in">
+                                                        <span>Убрать из сравнения</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                            
+                                            <div class="item-actions__button-wrapper item-actions-favorites__button-wrapper">
+                                                <button class="item-actions__button item-favorites__actions-button item-favorites__actions-fav js-item-card-toggle">
+                                                    <svg width="24" height="24">
+                                                        <use xlink:href="#heart"></use>
+                                                    </svg>
+                                                </button>
+                                                <div class="item-actions__button-label">
+                                                    <div class="item-actions__button-label-in">
+                                                        <span>Удалить из избранного</span>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                             
@@ -1455,16 +1560,31 @@
                                         <a href="#" class="button button-tertiary">Купить</a>
                             
                                         <div class="item-favorites__actions">
-                                            <button class="item-favorites__actions-button item-favorites__actions-stat js-item-card-toggle">
-                                                <svg width="24" height="24">
-                                                    <use xlink:href="#stat"></use>
-                                                </svg>
-                                            </button>
-                                            <button class="item-favorites__actions-button item-favorites__actions-fav js-item-card-toggle">
-                                                <svg width="24" height="24">
-                                                    <use xlink:href="#heart"></use>
-                                                </svg>
-                                            </button>
+                                            <div class="item-actions__button-wrapper item-actions-compare__button-wrapper">
+                                                <button class="item-favorites__actions-button item-favorites__actions-stat js-item-card-toggle">
+                                                    <svg width="24" height="24">
+                                                        <use xlink:href="#stat"></use>
+                                                    </svg>
+                                                </button>
+                                                <div class="item-actions__button-label">
+                                                    <div class="item-actions__button-label-in">
+                                                        <span>Убрать из сравнения</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                            
+                                            <div class="item-actions__button-wrapper item-actions-favorites__button-wrapper">
+                                                <button class="item-actions__button item-favorites__actions-button item-favorites__actions-fav js-item-card-toggle">
+                                                    <svg width="24" height="24">
+                                                        <use xlink:href="#heart"></use>
+                                                    </svg>
+                                                </button>
+                                                <div class="item-actions__button-label">
+                                                    <div class="item-actions__button-label-in">
+                                                        <span>Удалить из избранного</span>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                             
@@ -1859,7 +1979,7 @@
                             </div>
                             <a href="mailto:sales@splitis.ru" class="link-dark">sales@splitis.ru</a>
         
-                            <button class="link font-demibold color-red">Написать руководству</button>
+                            <button class="link font-demibold color-red" data-fancybox data-src="#popup-review">Написать руководству</button>
         
                             <div class="socials">
                                 <a href="#" class="socials__link">
