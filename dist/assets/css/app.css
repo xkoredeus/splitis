@@ -24691,6 +24691,13 @@ input[type="number"] {
 
 .form-field--range {
   position: relative;
+  -webkit-user-select: none;
+  /* Safari */
+  -ms-user-select: none;
+  /* IE 10 and IE 11 */
+  -moz-user-select: none;
+       user-select: none;
+  /* Standard syntax */
 }
 
 .form-field--range__list {
