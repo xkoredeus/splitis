@@ -1431,12 +1431,6 @@
   flex-direction: column;
   align-items: center;
 
-  &:hover {
-    .employee__info {
-      background-color: $redBg;
-    }
-  }
-
   &__picture {
     position: relative;
     width: 240px;

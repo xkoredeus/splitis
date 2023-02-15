@@ -33064,10 +33064,6 @@ div.pagination .pagination-dots {
           align-items: center;
 }
 
-.employee:hover .employee__info {
-  background-color: #FFEAEE;
-}
-
 .employee__picture {
   position: relative;
   width: 240px;
