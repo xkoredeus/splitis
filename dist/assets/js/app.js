@@ -28050,25 +28050,41 @@ $(() => {
         speed: 700,
         // watchSlidesProgress: true,
         spaceBetween: 20,
-        navigation: {
-            nextEl: ".js-how-slider-next",
-            prevEl: ".js-how-slider-prev",
-        },
         breakpoints: {
             0: {
                 slidesPerView: 1,
+                pagination: {
+                    el: ".js-how-slider-pagination",
+                    clickable: true,
+                },
             },
             576: {
                 slidesPerView: 2,
+                pagination: {
+                    el: ".js-how-slider-pagination",
+                    clickable: true,
+                },
             },
             976: {
                 slidesPerView: 3,
+                navigation: {
+                    nextEl: ".js-how-slider-next",
+                    prevEl: ".js-how-slider-prev",
+                },
             },
             1290: {
                 slidesPerView: 3,
+                navigation: {
+                    nextEl: ".js-how-slider-next",
+                    prevEl: ".js-how-slider-prev",
+                },
             },
             1560: {
                 slidesPerView: 3,
+                navigation: {
+                    nextEl: ".js-how-slider-next",
+                    prevEl: ".js-how-slider-prev",
+                },
             },
         },
     });
@@ -28240,24 +28256,6 @@ $(() => {
         slidesPerView: "auto",
         spaceBetween: 10,
         breakpoints: {
-            0: {
-                pagination: {
-                    el: ".js-category-brands-slider-pagination",
-                    clickable: true,
-                },
-            },
-            576: {
-                pagination: {
-                    el: ".js-category-brands-slider-pagination",
-                    clickable: true,
-                },
-            },
-            768: {
-                pagination: {
-                    el: ".js-category-brands-slider-pagination",
-                    clickable: true,
-                },
-            },
             1290: {
                 navigation: {
                     nextEl: ".js-category-brands-slider-next",

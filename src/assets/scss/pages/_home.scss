@@ -567,6 +567,10 @@
     }
 
     &-cards {
+      @include r($breakpoint-4) {
+        padding-right: 15%;
+      }
+
       .swiper-wrapper {
         padding-bottom: 100px;
 
@@ -806,6 +810,10 @@
   }
 }
 
+.how-slider__wrapper .swiper-slide {
+  height: auto;
+}
+
 .how {
   position: relative;
   padding: 20px;
@@ -815,6 +823,7 @@
   flex-direction: column;
   gap: 23px;
   max-width: 440px;
+  height: 100%;
 
   @include r($breakpoint-2) {
     max-width: unset;
@@ -1389,18 +1398,9 @@
   max-height: 420px;
   gap: 15px;
 
-  .link-dark {
-    width: calc(100% / 6);
-    display: inline-block;
-  }
-
   @include r($breakpoint-2) {
     max-height: 360px;
-    gap: 5px;
-
-    .link-dark {
-      width: auto;
-    }
+    gap: 8px;
   }
 
   @include r($breakpoint-3) {
@@ -1408,8 +1408,19 @@
   }
 
   @include r($breakpoint-4) {
-    .link-dark {
-      font-size: 11px;
+    max-height: unset;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .link-dark {
+    width: calc(100% / 6);
+    display: inline-block;
+
+    @include r($breakpoint-4) {
+      font-size: 14px;
+      //width: auto;
+      width: calc(95% / 2);
     }
   }
 }

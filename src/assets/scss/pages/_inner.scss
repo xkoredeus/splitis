@@ -1,4 +1,5 @@
 .filter {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -12,6 +13,18 @@
 
   @include r($breakpoint-4) {
     width: 100%;
+    padding-bottom: 140px;
+  }
+}
+
+.filter-actions {
+  @include r($breakpoint-4) {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    width: calc(100% - 40px) !important;
+    gap: 8px;
+    background-color: $white;
   }
 }
 
@@ -102,6 +115,10 @@
 .filter-popup {
   width: 100%;
   padding: 20px;
+
+  @include r($breakpoint-4) {
+    padding-left: 20px 10px;
+  }
 }
 
 .filter-applied {
@@ -149,6 +166,10 @@
   background-color: $grayBg;
   display: grid;
   grid-template-columns: 54px 54px;
+
+  @include r($breakpoint-3) {
+    display: none;
+  }
 
   &__decoration {
     position: absolute;
@@ -2452,7 +2473,8 @@
   }
 
   @include r($breakpoint-35) {
-    min-height: 370px;
+    max-width: 100%;
+    height: auto;
   }
 
   &::before {
