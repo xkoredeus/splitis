@@ -33395,6 +33395,23 @@ div.pagination .pagination-dots {
 
 .cart-item .title-h5 {
   white-space: nowrap;
+  min-width: 115px;
+}
+
+@media only screen and (max-width: 768px) {
+  .cart-item .title-h5 {
+    min-width: unset;
+  }
+}
+
+.cart-item .form-number {
+  min-width: 161px;
+}
+
+@media only screen and (max-width: 768px) {
+  .cart-item .form-number {
+    min-width: unset;
+  }
 }
 
 .cart-services {

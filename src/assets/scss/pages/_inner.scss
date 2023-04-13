@@ -1648,6 +1648,19 @@
 
   .title-h5 {
     white-space: nowrap;
+    min-width: 115px;
+
+    @include r($breakpoint-35) {
+      min-width: unset;
+    }
+  }
+
+  .form-number {
+    min-width: 161px;
+
+    @include r($breakpoint-35) {
+      min-width: unset;
+    }
   }
 }
 
