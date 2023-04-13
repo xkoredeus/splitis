@@ -1638,10 +1638,7 @@
     gap: 10px;
     padding-bottom: 20px;
     margin-top: -30px;
-
-    @include r($breakpoint-2) {
-      flex-grow: 1;
-    }
+    flex-grow: 1;
 
     @include r($breakpoint-35) {
       margin-top: 0;

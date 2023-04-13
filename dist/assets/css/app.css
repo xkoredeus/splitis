@@ -33381,14 +33381,9 @@ div.pagination .pagination-dots {
   gap: 10px;
   padding-bottom: 20px;
   margin-top: -30px;
-}
-
-@media only screen and (max-width: 1290px) {
-  .cart-item__info {
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-  }
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 @media only screen and (max-width: 768px) {
